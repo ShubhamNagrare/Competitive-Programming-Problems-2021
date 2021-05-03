@@ -7,6 +7,7 @@ import java.util.Queue;
 
 import BinarySearchTree.Implement_A_Binary_Search_Tree;
 import BinaryTree.Implement_A_Binary_Tree;
+import DynamicProgramming.Find_Equal_Sum_Partition_Problem;
 import DynamicProgramming.Find_Nth_Fibonacci_Number;
 import DynamicProgramming.Max_Profit_In_Knapsack_Problem;
 import DynamicProgramming.Max_Profit_In_Knapsack_Problem_Using_Top_Down_Approach;
@@ -108,8 +109,11 @@ public class Start {
 	//	Max_Profit_In_Knapsack_Problem_Using_Top_Down_Approach t = new Max_Profit_In_Knapsack_Problem_Using_Top_Down_Approach();
 	//	t.findMaxProfit();
 		
-		Subset_Sum_Problem s = new Subset_Sum_Problem();
-		s.findSum();
+	//	Subset_Sum_Problem s = new Subset_Sum_Problem();
+	//	s.findSum();
+		
+		Find_Equal_Sum_Partition_Problem f = new Find_Equal_Sum_Partition_Problem();
+		f.hasEqualSumPartition();
 
 	}
 	
