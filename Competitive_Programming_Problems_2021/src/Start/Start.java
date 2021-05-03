@@ -6,6 +6,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import BinarySearchTree.Implement_A_Binary_Search_Tree;
+import BinaryTree.Implement_A_Binary_Tree;
+import DynamicProgramming.Find_Nth_Fibonacci_Number;
+import DynamicProgramming.Max_Profit_In_Knapsack_Problem;
+import DynamicProgramming.Max_Profit_In_Knapsack_Problem_Using_Top_Down_Approach;
+import DynamicProgramming.Subset_Sum_Problem;
 import Graph.Bipartite_Graph_Check;
 import Graph.Connected_Components_Using_DFS;
 import Graph.Cycle_Detection_Undirected_Graph;
@@ -88,8 +93,23 @@ public class Start {
 	//	Reverse_A_Linked_List r = new Reverse_A_Linked_List();
 	//	r.iterative();
 		
-		Implement_A_Binary_Search_Tree b = new Implement_A_Binary_Search_Tree();
-		b.createBinarySearchTree();
+	//	Implement_A_Binary_Search_Tree b = new Implement_A_Binary_Search_Tree();
+	//	b.createBinarySearchTree();
+		
+	//	Implement_A_Binary_Tree b = new Implement_A_Binary_Tree();
+	//	b.implement();
+		
+	//	Find_Nth_Fibonacci_Number f = new Find_Nth_Fibonacci_Number();
+	//	f.findNthFib();
+		
+	//	Max_Profit_In_Knapsack_Problem m = new Max_Profit_In_Knapsack_Problem();
+	//	m.find_max_profi_In_knapsack_problem();
+		
+	//	Max_Profit_In_Knapsack_Problem_Using_Top_Down_Approach t = new Max_Profit_In_Knapsack_Problem_Using_Top_Down_Approach();
+	//	t.findMaxProfit();
+		
+		Subset_Sum_Problem s = new Subset_Sum_Problem();
+		s.findSum();
 
 	}
 	
