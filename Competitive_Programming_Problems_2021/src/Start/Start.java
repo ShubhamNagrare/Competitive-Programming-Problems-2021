@@ -5,13 +5,27 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import Array.Find_Greater_No_After_Reverse;
 import BinarySearchTree.Implement_A_Binary_Search_Tree;
 import BinaryTree.Implement_A_Binary_Tree;
-import DynamicProgramming.Find_Equal_Sum_Partition_Problem;
+import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion;
+import DynamicProgramming.Count_Number_Of_Subset_With_Given_Difference_Using_Tabulation;
+import DynamicProgramming.Count_Of_Given_Sum_With_A_Given_Sum_In_An_Array;
+import DynamicProgramming.Count_Of_Subset_Sum_With_A_Given_Sum;
+import DynamicProgramming.Find_Equal_Sum_Partition_Problem_Using_Tabulation;
+import DynamicProgramming.Find_Longest_Common_Subsequence_In_A_String;
+import DynamicProgramming.Find_Minimum_Subset_Sum_Difference_Using_Tabulation;
 import DynamicProgramming.Find_Nth_Fibonacci_Number;
-import DynamicProgramming.Max_Profit_In_Knapsack_Problem;
-import DynamicProgramming.Max_Profit_In_Knapsack_Problem_Using_Top_Down_Approach;
-import DynamicProgramming.Subset_Sum_Problem;
+import DynamicProgramming.Max_Price_In_Rod_Cutting_Problem_Usin_Recursion;
+import DynamicProgramming.Max_Price_In_Rod_Cutting_Problem_Using_Memoization;
+import DynamicProgramming.Max_Price_In_Rod_Cutting_Problem_Using_Tabulation;
+import DynamicProgramming.Max_Profit_In_Knapsack_Problem_Using_Recursion;
+import DynamicProgramming.Max_Profit_In_Knapsack_Problem_Using_Tabulation;
+import DynamicProgramming.Max_Profit_In_Knapsack_Problem_Using_Memoization;
+import DynamicProgramming.Max_profit_In_Unbounded_Knapsack_Problem_Using_Recursion;
+import DynamicProgramming.Max_profit_In_Unbounded_Knapsack_Problem_Using_Tabulation;
+import DynamicProgramming.Max_profit_In_Unbounded_Knapsack_Problem_Using_Memoization;
+import DynamicProgramming.Subset_Sum_Problem_Using_Tabulation;
 import Graph.Bipartite_Graph_Check;
 import Graph.Connected_Components_Using_DFS;
 import Graph.Cycle_Detection_Undirected_Graph;
@@ -22,6 +36,7 @@ import Graph.Single_Source_Shortest_Path;
 import Graph.Snakes_And_Ladder_Using_BFS;
 import LinkedList.Implement_A_Linked_List;
 import LinkedList.Reverse_A_Linked_List;
+import String.Find_Most_Occured_Character_In_A_String;
 
 public class Start {
 
@@ -112,8 +127,79 @@ public class Start {
 	//	Subset_Sum_Problem s = new Subset_Sum_Problem();
 	//	s.findSum();
 		
-		Find_Equal_Sum_Partition_Problem f = new Find_Equal_Sum_Partition_Problem();
-		f.hasEqualSumPartition();
+	//	Find_Equal_Sum_Partition_Problem f = new Find_Equal_Sum_Partition_Problem();
+	//	f.hasEqualSumPartition();
+		
+	//	Count_Of_Given_Sum_With_A_Given_Sum_In_An_Array c = new Count_Of_Given_Sum_With_A_Given_Sum_In_An_Array();
+	//	c.findCountOfSum();
+		
+	//	Find_Minimum_Subset_Sum_Difference m = new Find_Minimum_Subset_Sum_Difference();
+	//	m.findMinSumSubsetDiff();
+		
+	//	Count_Number_Of_Subset_With_Given_Difference s = new Count_Number_Of_Subset_With_Given_Difference();
+	//	s.givenSubsetWithGivenDifference();
+		
+	//	Find_Greater_No_After_Reverse f = new Find_Greater_No_After_Reverse();
+	//	f.findgreater();
+		
+	//	Find_Most_Occured_Character_In_A_String m = new Find_Most_Occured_Character_In_A_String();
+	//	m.findMostOccured();
+		
+	//	Max_profit_In_Unbounded_Knapsack_Problem m = new Max_profit_In_Unbounded_Knapsack_Problem();
+	//	m.getMaxProfit();
+		
+	//	Find_Longest_Common_Subsequence_In_A_String s = new Find_Longest_Common_Subsequence_In_A_String();
+	//	s.findSubsequence();
+		
+	//	Max_Profit_In_Knapsack_Problem_Using_Recursion m = new Max_Profit_In_Knapsack_Problem_Using_Recursion();
+	//	m.solve();
+		
+	//	Max_Profit_In_Knapsack_Problem_Using_Memoization m = new Max_Profit_In_Knapsack_Problem_Using_Memoization();
+	//	m.solve();
+		
+	//	Max_Profit_In_Knapsack_Problem_Using_Tabulation m = new Max_Profit_In_Knapsack_Problem_Using_Tabulation();
+	//	m.solve();
+		
+	//	Subset_Sum_Problem_Using_Tabulation m = new Subset_Sum_Problem_Using_Tabulation();
+	//	m.solve();
+		
+	//	Find_Equal_Sum_Partition_Problem_Using_Tabulation m = new Find_Equal_Sum_Partition_Problem_Using_Tabulation();
+	//	m.solve();
+		
+	//	Count_Of_Subset_Sum_With_A_Given_Sum m = new Count_Of_Subset_Sum_With_A_Given_Sum();
+	//	m.solve();
+		
+	//	Find_Minimum_Subset_Sum_Difference_Using_Tabulation f = new Find_Minimum_Subset_Sum_Difference_Using_Tabulation();
+	//	f.solve();
+		
+	//	Max_profit_In_Unbounded_Knapsack_Problem_Using_Recursion r = new Max_profit_In_Unbounded_Knapsack_Problem_Using_Recursion();
+	//	r.solve();
+		
+	//	Max_profit_In_Unbounded_Knapsack_Problem_Using_Memoization m = new Max_profit_In_Unbounded_Knapsack_Problem_Using_Memoization();
+	//	m.solve();
+		
+	//	Max_profit_In_Unbounded_Knapsack_Problem_Using_Tabulation m = new Max_profit_In_Unbounded_Knapsack_Problem_Using_Tabulation();
+	//	m.solve();
+		
+	//	Max_Price_In_Rod_Cutting_Problem_Usin_Recursion m = new Max_Price_In_Rod_Cutting_Problem_Usin_Recursion();
+	//	m.solve();
+		
+	//	Max_Price_In_Rod_Cutting_Problem_Using_Memoization m = new Max_Price_In_Rod_Cutting_Problem_Using_Memoization();
+	//	m.solve();
+		
+	//	Max_Price_In_Rod_Cutting_Problem_Using_Tabulation m = new Max_Price_In_Rod_Cutting_Problem_Using_Tabulation();
+	//	m.solve();
+		
+		Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion m = new Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion();
+		m.solve();
+		
+		
+		
+		
+		
+		
+		
+		
 
 	}
 	
