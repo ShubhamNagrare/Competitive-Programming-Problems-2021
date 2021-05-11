@@ -15,7 +15,10 @@ public class Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion {
 	
 	private int solve(int[] arr, int n, int sum) {
 		
-		if(n ==0 || sum == 0) {
+		if(sum == 0) {
+			return 1;
+		}
+		if(n ==0 ) {
 			return 0;
 		}
 		

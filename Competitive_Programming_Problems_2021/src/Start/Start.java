@@ -8,6 +8,7 @@ import java.util.Queue;
 import Array.Find_Greater_No_After_Reverse;
 import BinarySearchTree.Implement_A_Binary_Search_Tree;
 import BinaryTree.Implement_A_Binary_Tree;
+import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion;
 import DynamicProgramming.Count_Number_Of_Subset_With_Given_Difference_Using_Tabulation;
 import DynamicProgramming.Count_Of_Given_Sum_With_A_Given_Sum_In_An_Array;
@@ -190,7 +191,10 @@ public class Start {
 	//	Max_Price_In_Rod_Cutting_Problem_Using_Tabulation m = new Max_Price_In_Rod_Cutting_Problem_Using_Tabulation();
 	//	m.solve();
 		
-		Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion m = new Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion();
+	//	Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion m = new Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion();
+	//	m.solve();
+		
+		Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization m = new Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization();
 		m.solve();
 		
 		
