@@ -32,6 +32,7 @@ import DynamicProgramming.Max_Profit_In_Knapsack_Problem_Using_Tabulation;
 import DynamicProgramming.Max_Profit_In_Knapsack_Problem_Using_Memoization;
 import DynamicProgramming.Max_profit_In_Unbounded_Knapsack_Problem_Using_Recursion;
 import DynamicProgramming.Max_profit_In_Unbounded_Knapsack_Problem_Using_Tabulation;
+import DynamicProgramming.Print_Longest_Common_SubSequence_Using_Tabulation;
 import DynamicProgramming.Max_profit_In_Unbounded_Knapsack_Problem_Using_Memoization;
 import DynamicProgramming.Subset_Sum_Problem_Using_Tabulation;
 import Graph.Bipartite_Graph_Check;
@@ -222,7 +223,10 @@ public class Start {
 	//	Find_Length_Of_Longest_Common_SubString_Using_Memoization m = new Find_Length_Of_Longest_Common_SubString_Using_Memoization();
 	//	m.solve();
 		
-		Find_Length_Of_Longest_Common_SubString_Using_Tabulation m = new Find_Length_Of_Longest_Common_SubString_Using_Tabulation();
+	//	Find_Length_Of_Longest_Common_SubString_Using_Tabulation m = new Find_Length_Of_Longest_Common_SubString_Using_Tabulation();
+	//	m.solve();
+		
+		Print_Longest_Common_SubSequence_Using_Tabulation m = new Print_Longest_Common_SubSequence_Using_Tabulation();
 		m.solve();
 		
 		
