@@ -12,12 +12,7 @@ public void solve() {
 		
 		for(int i=0; i<n+1; i++) {
 			for(int j=0; j<sum+1; j++) {
-				if(i == 0) {
-					dp[i][j] = 0;
-				}
-				if(j == 0) {
-					dp[i][j] = 1;
-				}
+					dp[i][j] = -1;	
 			}
 		}
 		
@@ -28,12 +23,19 @@ public void solve() {
 
 		public int solve(int[] arr, int n, int W, int[][] dp) {
 	
-			if(arr[n-1] <= W) {
-				dp[n][W] = Integer.max( dp[n-1][W] + solve(arr, n, W - arr[n-1], dp), solve(arr, n-1, W - arr[n-1], dp));
+			if(n == 0 || W == 0) {
+				return 0;
+			}
+			
+			if(dp[n][W] != -1) {
+				return dp[n][W];
+			}
+			
+			if(arr[n-1] <= W){
+				return dp[n][W] = dp[n-1][W] + solve(arr, n, W - arr[n-1] , dp) ;
 			}
 			else {
-				dp[n][W] = solve(arr, n, W - arr[n-1], dp);
-			}		
-			return dp[n][W];
+				return  dp[n][W] = solve(arr, n-1, W, dp);
+			}
 		}
 }

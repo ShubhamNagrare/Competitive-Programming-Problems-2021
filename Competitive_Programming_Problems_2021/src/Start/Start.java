@@ -10,10 +10,17 @@ import BinarySearchTree.Implement_A_Binary_Search_Tree;
 import BinaryTree.Implement_A_Binary_Tree;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion;
+import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Tabulation;
 import DynamicProgramming.Count_Number_Of_Subset_With_Given_Difference_Using_Tabulation;
 import DynamicProgramming.Count_Of_Given_Sum_With_A_Given_Sum_In_An_Array;
 import DynamicProgramming.Count_Of_Subset_Sum_With_A_Given_Sum;
 import DynamicProgramming.Find_Equal_Sum_Partition_Problem_Using_Tabulation;
+import DynamicProgramming.Find_Length_Of_Longest_COmmon_SubSequence_Using_Recursion;
+import DynamicProgramming.Find_Length_Of_Longest_Common_SubSequence_Using_Memoization;
+import DynamicProgramming.Find_Length_Of_Longest_Common_SubSequence_Using_Tabulation;
+import DynamicProgramming.Find_Length_Of_Longest_Common_SubString_Using_Memoization;
+import DynamicProgramming.Find_Length_Of_Longest_Common_SubString_Using_Recursion;
+import DynamicProgramming.Find_Length_Of_Longest_Common_SubString_Using_Tabulation;
 import DynamicProgramming.Find_Longest_Common_Subsequence_In_A_String;
 import DynamicProgramming.Find_Minimum_Subset_Sum_Difference_Using_Tabulation;
 import DynamicProgramming.Find_Nth_Fibonacci_Number;
@@ -194,9 +201,29 @@ public class Start {
 	//	Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion m = new Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion();
 	//	m.solve();
 		
-		Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization m = new Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization();
-		m.solve();
+	//	Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization m = new Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization();
+	//	m.solve();
 		
+	//	Coin_ChangeProblem_Max_No_Of_Ways_Using_Tabulation m = new Coin_ChangeProblem_Max_No_Of_Ways_Using_Tabulation();	
+	//	m.solve();
+		
+	//	Find_Length_Of_Longest_COmmon_SubSequence_Using_Recursion m = new Find_Length_Of_Longest_COmmon_SubSequence_Using_Recursion();
+	//	m.solve();
+		
+	//	Find_Length_Of_Longest_Common_SubSequence_Using_Memoization m = new Find_Length_Of_Longest_Common_SubSequence_Using_Memoization();
+	//	m.solve();
+		
+	//	Find_Length_Of_Longest_Common_SubSequence_Using_Tabulation m = new Find_Length_Of_Longest_Common_SubSequence_Using_Tabulation();
+	//	m.solve();
+		
+	//	Find_Length_Of_Longest_Common_SubString_Using_Recursion m = new Find_Length_Of_Longest_Common_SubString_Using_Recursion();
+	//	m.solve();
+		
+	//	Find_Length_Of_Longest_Common_SubString_Using_Memoization m = new Find_Length_Of_Longest_Common_SubString_Using_Memoization();
+	//	m.solve();
+		
+		Find_Length_Of_Longest_Common_SubString_Using_Tabulation m = new Find_Length_Of_Longest_Common_SubString_Using_Tabulation();
+		m.solve();
 		
 		
 		
