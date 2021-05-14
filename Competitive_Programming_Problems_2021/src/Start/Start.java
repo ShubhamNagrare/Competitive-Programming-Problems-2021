@@ -11,9 +11,13 @@ import BinaryTree.Implement_A_Binary_Tree;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Tabulation;
+import DynamicProgramming.Coin_ChangeProblem_Min_No_Of_Coins_Using_Tabulation;
 import DynamicProgramming.Count_Number_Of_Subset_With_Given_Difference_Using_Tabulation;
 import DynamicProgramming.Count_Of_Given_Sum_With_A_Given_Sum_In_An_Array;
 import DynamicProgramming.Count_Of_Subset_Sum_With_A_Given_Sum;
+import DynamicProgramming.Count_Of_Subset_To_Get_Target_Sum;
+import DynamicProgramming.FInd_If_Squence_Has_Matching_Pattern;
+import DynamicProgramming.FInd_Min_No_Of_Deletion_To_Make_It_A_Palindrome;
 import DynamicProgramming.Find_Equal_Sum_Partition_Problem_Using_Tabulation;
 import DynamicProgramming.Find_Length_Of_Longest_COmmon_SubSequence_Using_Recursion;
 import DynamicProgramming.Find_Length_Of_Longest_Common_SubSequence_Using_Memoization;
@@ -21,6 +25,9 @@ import DynamicProgramming.Find_Length_Of_Longest_Common_SubSequence_Using_Tabula
 import DynamicProgramming.Find_Length_Of_Longest_Common_SubString_Using_Memoization;
 import DynamicProgramming.Find_Length_Of_Longest_Common_SubString_Using_Recursion;
 import DynamicProgramming.Find_Length_Of_Longest_Common_SubString_Using_Tabulation;
+import DynamicProgramming.Find_Length_Of_Longest_palindromic_SubSequence;
+import DynamicProgramming.Find_Length_Of_Shortest_Common_SuperSequence;
+import DynamicProgramming.Find_Length_Of_longest_repeating_SubSequence;
 import DynamicProgramming.Find_Longest_Common_Subsequence_In_A_String;
 import DynamicProgramming.Find_Minimum_Subset_Sum_Difference_Using_Tabulation;
 import DynamicProgramming.Find_Nth_Fibonacci_Number;
@@ -32,7 +39,11 @@ import DynamicProgramming.Max_Profit_In_Knapsack_Problem_Using_Tabulation;
 import DynamicProgramming.Max_Profit_In_Knapsack_Problem_Using_Memoization;
 import DynamicProgramming.Max_profit_In_Unbounded_Knapsack_Problem_Using_Recursion;
 import DynamicProgramming.Max_profit_In_Unbounded_Knapsack_Problem_Using_Tabulation;
+import DynamicProgramming.Min_Insertion_Required_To_make_It_A_Palindrome;
+import DynamicProgramming.Min_No_Of_Insertion_Deletion_Required_To_Convert_String_A_To_String_B;
 import DynamicProgramming.Print_Longest_Common_SubSequence_Using_Tabulation;
+import DynamicProgramming.Print_Shortest_Common_SuperSequence;
+import DynamicProgramming.Find_Length_Of_Longest_Common_SubString;
 import DynamicProgramming.Max_profit_In_Unbounded_Knapsack_Problem_Using_Memoization;
 import DynamicProgramming.Subset_Sum_Problem_Using_Tabulation;
 import Graph.Bipartite_Graph_Check;
@@ -226,8 +237,51 @@ public class Start {
 	//	Find_Length_Of_Longest_Common_SubString_Using_Tabulation m = new Find_Length_Of_Longest_Common_SubString_Using_Tabulation();
 	//	m.solve();
 		
-		Print_Longest_Common_SubSequence_Using_Tabulation m = new Print_Longest_Common_SubSequence_Using_Tabulation();
+	//	Print_Longest_Common_SubSequence_Using_Tabulation m = new Print_Longest_Common_SubSequence_Using_Tabulation();
+	//	m.solve();
+		
+	//	Find_Length_Of_Longest_Common_SubString m = new Find_Length_Of_Longest_Common_SubString();
+	//	m.solve();
+		
+	//	Find_Length_Of_Longest_Common_SubString m = new Find_Length_Of_Longest_Common_SubString();
+	//	m.solve();
+		
+	//	Find_Length_Of_Shortest_Common_SuperSequence m = new Find_Length_Of_Shortest_Common_SuperSequence();
+	//	m.solve();
+		
+	//	Min_No_Of_Insertion_Deletion_Required_To_Convert_String_A_To_String_B b = new Min_No_Of_Insertion_Deletion_Required_To_Convert_String_A_To_String_B();
+	//	b.solve();
+		
+	//	Find_Length_Of_Longest_palindromic_SubSequence m = new Find_Length_Of_Longest_palindromic_SubSequence();
+	//	m.solve();
+		
+	//	FInd_Min_No_Of_Deletion_To_Make_It_A_Palindrome m = new FInd_Min_No_Of_Deletion_To_Make_It_A_Palindrome();
+	//	m.solve();
+		
+	//	Print_Shortest_Common_SuperSequence m = new Print_Shortest_Common_SuperSequence();
+	//	m.solve();
+		
+	//	Find_Length_Of_longest_repeating_SubSequence m = new Find_Length_Of_longest_repeating_SubSequence();
+	//	m.solve();
+		
+	//	FInd_If_Squence_Has_Matching_Pattern m = new FInd_If_Squence_Has_Matching_Pattern();
+	//	m.solve();
+		
+	//	Min_Insertion_Required_To_make_It_A_Palindrome m = new Min_Insertion_Required_To_make_It_A_Palindrome();
+	//	m.solve();
+		
+	//	Count_Number_Of_Subset_With_Given_Difference_Using_Tabulation m = new Count_Number_Of_Subset_With_Given_Difference_Using_Tabulation();
+	//	m.solve();
+		
+	//	Count_Of_Subset_To_Get_Target_Sum m = new Count_Of_Subset_To_Get_Target_Sum();
+	//	m.solve();
+		
+	//	Coin_ChangeProblem_Max_No_Of_Ways_Using_Tabulation m = new Coin_ChangeProblem_Max_No_Of_Ways_Using_Tabulation();
+	//	m.solve();
+		
+		Coin_ChangeProblem_Min_No_Of_Coins_Using_Tabulation m  = new Coin_ChangeProblem_Min_No_Of_Coins_Using_Tabulation();
 		m.solve();
+		
 		
 		
 		

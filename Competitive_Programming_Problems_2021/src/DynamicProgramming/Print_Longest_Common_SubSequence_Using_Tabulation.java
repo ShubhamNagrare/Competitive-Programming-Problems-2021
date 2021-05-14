@@ -46,19 +46,7 @@ public class Print_Longest_Common_SubSequence_Using_Tabulation {
 			}			
 		}
 		
-//		while(i>0) {
-//			if(a.charAt(i-1) == b.charAt(j-1)) {
-//				System.out.println(a.charAt(i-1));
-//				i--;
-//			}
-//		}
-//		
-//		while(j>0) {
-//			if(a.charAt(i-1) == b.charAt(j-1)) {
-//				System.out.println(a.charAt(i-1));
-//				j--;
-//			}
-//		}
+
 		
 		
 		return 1;

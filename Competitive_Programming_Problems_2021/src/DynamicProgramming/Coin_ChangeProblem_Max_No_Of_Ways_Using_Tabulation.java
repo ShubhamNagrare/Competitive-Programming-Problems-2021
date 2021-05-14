@@ -2,10 +2,12 @@ package DynamicProgramming;
 
 public class Coin_ChangeProblem_Max_No_Of_Ways_Using_Tabulation {
 	
+	// https://www.geeksforgeeks.org/coin-change-dp-7/
+	
 public void solve() {
 		
 		int[] arr = {1,2,3};
-		int sum = 5;
+		int sum = 4;
 		int n= arr.length;
 		
 		int[][] dp = new int[n+1][sum+1];
