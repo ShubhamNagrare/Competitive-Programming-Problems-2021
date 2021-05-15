@@ -7,7 +7,16 @@ import java.util.Queue;
 
 import Array.Find_Greater_No_After_Reverse;
 import BinarySearchTree.Implement_A_Binary_Search_Tree;
+import BinaryTree.Check_If_A_Tree_Is_A_Binary_Search_Tree_Or_Not;
+import BinaryTree.Delete_Node_In_A_Binary_Tree;
+import BinaryTree.Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal;
 import BinaryTree.Implement_A_Binary_Tree;
+import BinaryTree.Search_Key_In_A_Binary_Search_Tree;
+import BinaryTree.Search_Min_And_Max_Element_In_A_Binary_Search_Tree;
+import BinaryTree.Traverse_Binary_Tree_Using_In_Order_Traversal;
+import BinaryTree.Traverse_Binary_Tree_Using_Level_Order_Traversal;
+import BinaryTree.Traverse_Binary_Tree_Using_Post_Order_Traversal;
+import BinaryTree.Traverse_Binary_Tree_Using_Pre_Order_Traversal;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Tabulation;
@@ -52,6 +61,7 @@ import Graph.Cycle_Detection_Undirected_Graph;
 import Graph.Flood_Fill;
 import Graph.Implement_Depth_First_Search;
 import Graph.Implement_Graph_Using_Adjacency_List;
+import Graph.PuruTest;
 import Graph.Single_Source_Shortest_Path;
 import Graph.Snakes_And_Ladder_Using_BFS;
 import LinkedList.Implement_A_Linked_List;
@@ -279,8 +289,41 @@ public class Start {
 	//	Coin_ChangeProblem_Max_No_Of_Ways_Using_Tabulation m = new Coin_ChangeProblem_Max_No_Of_Ways_Using_Tabulation();
 	//	m.solve();
 		
-		Coin_ChangeProblem_Min_No_Of_Coins_Using_Tabulation m  = new Coin_ChangeProblem_Min_No_Of_Coins_Using_Tabulation();
-		m.solve();
+	//	Coin_ChangeProblem_Min_No_Of_Coins_Using_Tabulation m  = new Coin_ChangeProblem_Min_No_Of_Coins_Using_Tabulation();
+	//	m.solve();
+		
+	//	Implement_A_Binary_Tree m = new Implement_A_Binary_Tree();
+	//	m.implement();
+		
+	//	Traverse_Binary_Tree_Using_Pre_Order_Traversal m = new Traverse_Binary_Tree_Using_Pre_Order_Traversal();
+	//	m.implement();
+		
+	//	Traverse_Binary_Tree_Using_In_Order_Traversal m = new Traverse_Binary_Tree_Using_In_Order_Traversal();
+	//	m.implement();
+		
+	//	Traverse_Binary_Tree_Using_Post_Order_Traversal m = new Traverse_Binary_Tree_Using_Post_Order_Traversal();
+	//	m.implement();
+		
+	//	Delete_Node_In_A_Binary_Tree m = new Delete_Node_In_A_Binary_Tree();
+	//	m.implement();
+		
+	//	Traverse_Binary_Tree_Using_Level_Order_Traversal m = new Traverse_Binary_Tree_Using_Level_Order_Traversal();
+	//	m.implement();
+		
+	//	Search_Key_In_A_Binary_Search_Tree m = new Search_Key_In_A_Binary_Search_Tree();
+	//	m.implement();
+		
+	//	Search_Min_And_Max_Element_In_A_Binary_Search_Tree m = new Search_Min_And_Max_Element_In_A_Binary_Search_Tree();
+	//	m.implement();
+		
+	//	Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal m = new Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal();
+	//	m.implement();
+		
+	//	Check_If_A_Tree_Is_A_Binary_Search_Tree_Or_Not m = new Check_If_A_Tree_Is_A_Binary_Search_Tree_Or_Not();
+	//	m.implement();
+		
+		PuruTest p = new PuruTest();
+		p.solve();
 		
 		
 		
