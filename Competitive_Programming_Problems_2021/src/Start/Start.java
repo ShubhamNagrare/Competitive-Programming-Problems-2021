@@ -6,17 +6,22 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import Array.Find_Greater_No_After_Reverse;
-import BinarySearchTree.Implement_A_Binary_Search_Tree;
-import BinaryTree.Check_If_A_Tree_Is_A_Binary_Search_Tree_Or_Not;
-import BinaryTree.Delete_Node_In_A_Binary_Tree;
-import BinaryTree.Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal;
-import BinaryTree.Implement_A_Binary_Tree;
-import BinaryTree.Search_Key_In_A_Binary_Search_Tree;
-import BinaryTree.Search_Min_And_Max_Element_In_A_Binary_Search_Tree;
-import BinaryTree.Traverse_Binary_Tree_Using_In_Order_Traversal;
-import BinaryTree.Traverse_Binary_Tree_Using_Level_Order_Traversal;
-import BinaryTree.Traverse_Binary_Tree_Using_Post_Order_Traversal;
-import BinaryTree.Traverse_Binary_Tree_Using_Pre_Order_Traversal;
+import BinarySearchTree.Check_If_A_Tree_Is_A_Binary_Search_Tree_Or_Not;
+import BinarySearchTree.Convert_A_Binary_Tree_To_Binary_Search_Tree;
+import BinarySearchTree.Convert_BST_To_Sum_Of_All_Smaller_Keys;
+import BinarySearchTree.Convert_Sorted_Array_To_Binary_Search_Tree;
+import BinarySearchTree.Count_Nodes_In_A_Given_Binary_Search_Tree;
+import BinarySearchTree.Delete_Node_In_A_Binary_Tree;
+import BinarySearchTree.Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal;
+import BinarySearchTree.Implement_A_Binary_Tree;
+import BinarySearchTree.Insert_A_Node_In_A_Binary_Search_Tree;
+import BinarySearchTree.Search_Key_In_A_Binary_Search_Tree;
+import BinarySearchTree.Search_Min_And_Max_Element_In_A_Binary_Search_Tree;
+import BinarySearchTree.Traverse_Binary_Tree_Using_In_Order_Traversal;
+import BinarySearchTree.Traverse_Binary_Tree_Using_Level_Order_Traversal;
+import BinarySearchTree.Traverse_Binary_Tree_Using_Post_Order_Traversal;
+import BinarySearchTree.Traverse_Binary_Tree_Using_Pre_Order_Traversal;
+import BinaryTree.Implement_A_Binary_Search_Tree;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Tabulation;
@@ -322,8 +327,26 @@ public class Start {
 	//	Check_If_A_Tree_Is_A_Binary_Search_Tree_Or_Not m = new Check_If_A_Tree_Is_A_Binary_Search_Tree_Or_Not();
 	//	m.implement();
 		
-		PuruTest p = new PuruTest();
-		p.solve();
+	//	PuruTest p = new PuruTest();
+	//	p.solve();
+		
+	//	Insert_A_Node_In_A_Binary_Search_Tree m = new Insert_A_Node_In_A_Binary_Search_Tree();
+	//	m.solve();
+		
+	//	Delete_Node_In_A_Binary_Tree t = new Delete_Node_In_A_Binary_Tree();
+	//	t.implement();
+		
+	//	Convert_A_Binary_Tree_To_Binary_Search_Tree m = new Convert_A_Binary_Tree_To_Binary_Search_Tree();
+	//	m.solve();
+		
+	//	Count_Nodes_In_A_Given_Binary_Search_Tree m = new Count_Nodes_In_A_Given_Binary_Search_Tree();
+	//	m.implement();
+		
+	//	Convert_Sorted_Array_To_Binary_Search_Tree m = new Convert_Sorted_Array_To_Binary_Search_Tree();
+	//	m.implement();
+		
+		Convert_BST_To_Sum_Of_All_Smaller_Keys m = new Convert_BST_To_Sum_Of_All_Smaller_Keys();
+		m.implement();
 		
 		
 		

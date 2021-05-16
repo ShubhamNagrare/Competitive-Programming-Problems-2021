@@ -1,6 +1,6 @@
-package BinaryTree;
+package BinarySearchTree;
 
-import BinaryTree.Traverse_Binary_Tree_Using_Pre_Order_Traversal.Node;
+import BinarySearchTree.Traverse_Binary_Tree_Using_Pre_Order_Traversal.Node;
 
 public class Traverse_Binary_Tree_Using_Post_Order_Traversal {
 	

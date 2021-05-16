@@ -1,4 +1,4 @@
-package BinaryTree;
+package BinarySearchTree;
 
 public class Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal {
 	

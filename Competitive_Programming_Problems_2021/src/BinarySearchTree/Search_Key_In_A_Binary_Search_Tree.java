@@ -1,8 +1,9 @@
-package BinaryTree;
+package BinarySearchTree;
 
-public class Traverse_Binary_Tree_Using_In_Order_Traversal {
+
+public class Search_Key_In_A_Binary_Search_Tree {
 	
-	public void implement() {
+public void implement() {
 		
 		BinaryTree tree = new BinaryTree();
 		tree.add(9);
@@ -13,8 +14,10 @@ public class Traverse_Binary_Tree_Using_In_Order_Traversal {
 		tree.add(2);
 		tree.add(19);
 		tree.add(12);
-		tree.inOrder();
+		
+		System.out.println(tree.search(9).value);
 	}
+	
 	
 	class Node{
 		int value;
@@ -23,11 +26,10 @@ public class Traverse_Binary_Tree_Using_In_Order_Traversal {
 		public Node(int value) {
 			this.value = value;
 			left = right = null;
-		}
+		}		
 	}
 	
 	class BinaryTree{
-		
 		Node root;
 		
 		private Node addRecursive(Node current, int value) {
@@ -37,30 +39,40 @@ public class Traverse_Binary_Tree_Using_In_Order_Traversal {
 			}
 			
 			if(value < current.value) {
-				current.left = addRecursive(current.left, value);
+				current.left  = addRecursive(current.left, value);
 			}
 			else if(value > current.value) {
 				current.right = addRecursive(current.right, value);
 			}
-			return current;		
+			return current;
 		}
 		
 		public void add(int value) {
 			root = addRecursive(root, value);
 		}
 		
-		private void traverseInOrder(Node root) {
-			if(root != null) {
-				traverseInOrder(root.left);
-				System.out.println(" " + root.value);
-				traverseInOrder(root.right);
+		private Node search(Node current, int value) {
+			
+			if(current == null) {
+				return null;
 			}
+			
+			if(current.value == value) {
+				return current;
+			}
+			
+			if(value < current.value) {
+				return  search(current.left, value);
+			}
+			else if(value > current.value) {
+				return search(current.right, value);
+			}
+			return current;
 		}
 		
-		public void inOrder() {
-			traverseInOrder(root);
+		public Node search(int value) {
+			return search(root, value);
 		}
-		
 		
 	}
 

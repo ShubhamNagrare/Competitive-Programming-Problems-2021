@@ -1,9 +1,6 @@
-package BinaryTree;
+package BinarySearchTree;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
-public class Traverse_Binary_Tree_Using_Level_Order_Traversal {
+public class Traverse_Binary_Tree_Using_Pre_Order_Traversal {
 	
 	public void implement() {
 		
@@ -17,12 +14,13 @@ public class Traverse_Binary_Tree_Using_Level_Order_Traversal {
 		tree.add(19);
 		tree.add(12);
 		
-		tree.traverseLevelOrder();
+		tree.preOrder();
 	}
 	
-	class Node{
+	
+	class Node {
 		int value;
-		Node left,right;
+		Node left, right;
 		
 		public Node(int value) {
 			this.value = value;
@@ -33,8 +31,7 @@ public class Traverse_Binary_Tree_Using_Level_Order_Traversal {
 	class BinaryTree{
 		Node root;
 		
-		private Node addRecursive(Node current, int value){
-			
+		private Node addRecursive(Node current, int value) {
 			if(current == null) {
 				return new Node(value);
 			}
@@ -45,39 +42,28 @@ public class Traverse_Binary_Tree_Using_Level_Order_Traversal {
 			else if(value > current.value) {
 				current.right = addRecursive(current.right, value);
 			}
+			else {
+				return current;
+			}
 			return current;
 		}
-		
+				
 		public void add(int value) {
 			root = addRecursive(root, value);
 		}
 		
 		
-		public void traverseLevelOrder() {
-			if(root == null) {
-				return;
+		private void traversePreOrder(Node root) {			
+			if(root != null ) {				
+				System.out.println(" " + root.value);
+				traversePreOrder(root.left);
+				traversePreOrder(root.right);				
 			}
-			
-			Queue<Node> nodes = new LinkedList<>();
-			nodes.add(root);
-			
-			while(!nodes.isEmpty()) {
-				
-				Node node = nodes.remove();
-				System.out.print(" " + node.value);
-				
-				if(node.left != null) {
-					nodes.add(node.left);	
-				}
-				
-				if(node.right != null) {
-					nodes.add(node.right);
-				}				
-			}			
 		}
 		
-		
-		
+		public void preOrder() {
+			traversePreOrder(root);
+		}	
 	}
 
 }

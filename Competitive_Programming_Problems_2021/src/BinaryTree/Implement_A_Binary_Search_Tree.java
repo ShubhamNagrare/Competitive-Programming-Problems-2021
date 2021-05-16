@@ -1,4 +1,4 @@
-package BinarySearchTree;
+package BinaryTree;
 
 public class Implement_A_Binary_Search_Tree {
 	

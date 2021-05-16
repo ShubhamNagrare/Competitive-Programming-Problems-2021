@@ -1,4 +1,4 @@
-package BinaryTree;
+package BinarySearchTree;
 
 public class Search_Min_And_Max_Element_In_A_Binary_Search_Tree {
 	

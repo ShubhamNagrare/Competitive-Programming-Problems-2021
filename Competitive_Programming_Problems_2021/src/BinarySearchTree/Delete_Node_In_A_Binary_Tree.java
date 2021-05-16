@@ -1,4 +1,4 @@
-package BinaryTree;
+package BinarySearchTree;
 
 
 public class Delete_Node_In_A_Binary_Tree {
@@ -60,6 +60,7 @@ public void implement() {
 			root = addRecursive(root, value);
 		}
 		
+		
 		private Node deleteRecursive(Node current, int value) {
 			
 			if(current == null) {
@@ -72,32 +73,73 @@ public void implement() {
 					return null;
 				}
 				
-				if(current.left == null) {
-					return current.right;
-				}
-				
 				if(current.right == null) {
 					return current.left;
 				}
 				
-				int smallestValue = findSmallestValue(current.right);
+				if(current.left == null) {
+					return current.right;
+				}
+				
+				int smallestValue = getSmallestValue(current.right);
 				current.value = smallestValue;
 				current.right = deleteRecursive(current.right, smallestValue);
-				return current;				
+				return current;		
 			}
-			
-			if(value < current.value) {
-				current.left = deleteRecursive(current.left, value);
+						
+			if(value < current.value ) {
+				current.left =  deleteRecursive(current.left, value);
 			}
-			current.right = deleteRecursive(current.right, value);
+				current.right = deleteRecursive(current.right, value);
 			return current;
 		}
 		
+		private int getSmallestValue(Node current) {
+			return current.left == null ? current.value : getSmallestValue(current.left);
+		}
+		
+		
+		
+		
+		
+//		private Node deleteRecursive(Node current, int value) {
+//			
+//			if(current == null) {
+//				return null;
+//			}
+//			
+//			if(value == current.value) {
+//				
+//				if(current.left == null && current.right == null) {
+//					return null;
+//				}
+//				
+//				if(current.left == null) {
+//					return current.right;
+//				}
+//				
+//				if(current.right == null) {
+//					return current.left;
+//				}
+//				
+//				int smallestValue = findSmallestValue(current.right);
+//				current.value = smallestValue;
+//				current.right = deleteRecursive(current.right, smallestValue);
+//				return current;				
+//			}
+//			
+//			if(value < current.value) {
+//				current.left = deleteRecursive(current.left, value);
+//			}
+//			current.right = deleteRecursive(current.right, value);
+//			return current;
+//		}
+//		
 		 
 		
-		private int findSmallestValue(Node current) {
-			return current.left == null ? root.value : findSmallestValue(current.left);
-		}
+//		private int findSmallestValue(Node current) {
+//			return current.left == null ? root.value : findSmallestValue(current.left);
+//		}
 		
 		public void delete(int value) {
 			root = deleteRecursive(root, value);

@@ -1,4 +1,4 @@
-package BinaryTree;
+package BinarySearchTree;
 
 
 public class Check_If_A_Tree_Is_A_Binary_Search_Tree_Or_Not {
