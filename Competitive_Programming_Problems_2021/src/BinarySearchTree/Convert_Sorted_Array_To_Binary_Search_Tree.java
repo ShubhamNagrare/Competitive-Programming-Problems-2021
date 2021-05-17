@@ -6,31 +6,16 @@ public class Convert_Sorted_Array_To_Binary_Search_Tree {
 	// TODO
 	public void implement() {
 		
-		int[] arr = {1,2,3,4,5,6,7,8,9};
+		int[] arr = {1, 2, 3, 4, 5, 6, 7};
 		BinarySearchTree bst = new BinarySearchTree();
-		construct(bst, arr, 0, arr.length);
-		
-		bst.inOrder();
-		
-		
+		System.out.println("BST Search");
+		bst.construct(arr);
+		bst.preOrder();
 	}
 	
-	public void construct(BinarySearchTree bst, int[] arr, int start, int end) {
-				
-		if(start >= end) {
-			bst.add(arr[start]);
-			return;
-		}
-		
-			int mid = (start + ((end) - start))/2;
-			
-			bst.add(arr[mid]);
-			
-			construct(bst, arr, start, mid);
-			
-			construct(bst, arr, mid+1, end);
 
-	}
+	
+
 	
 	
 	class Node{
@@ -40,10 +25,20 @@ public class Convert_Sorted_Array_To_Binary_Search_Tree {
 			this.value = value;
 			left =right=null;
 		}
+		
+		public Node(int value, Node left, Node right) {
+			this.value = value;
+			this.left = left;
+			this.right = right;
+		}
 	}
 	
 	class BinarySearchTree{
 		Node root;
+		
+		public Node getRoot() {
+			return root;
+		}
 		
 		public void add(int value) {
 			root = addRecurssive(root,value);
@@ -68,9 +63,55 @@ public class Convert_Sorted_Array_To_Binary_Search_Tree {
 		}
 		
 		private void traverseInOrder(Node current) {
-			traverseInOrder(current.left);
-			System.out.println(" " + current.value);
-			traverseInOrder(current.right);
+			if(current != null) {
+				traverseInOrder(current.left);
+				System.out.print(" " + current.value);
+				traverseInOrder(current.right);
+			}
+
+		}
+		
+		public void preOrder() {
+			traversePreOrder(root);
+		}
+		
+		private void traversePreOrder(Node current) {
+			if(current != null) {
+				System.out.print(" " + current.value);
+				traversePreOrder(current.left);
+				traversePreOrder(current.right);
+			}
+
+		}
+		
+		
+		
+		
+		public void inOrderUtil(Node root) {
+			if(root != null) {
+				inOrderUtil(root.left);
+				System.out.print(" " + root.value);
+				inOrderUtil(root.right);
+			}
+		}
+		
+		public void construct(int[] arr) {
+			root = construct(arr, 0, arr.length-1);
+		}
+		
+		private Node construct(int[] arr, int start, int end) {
+			
+			if(start > end) {
+				return null;
+			}
+			
+			int mid = (start + end)/2;
+			
+			Node ln = construct(arr, start, mid -1);
+			Node rn = construct(arr,  mid+1, end);			
+			Node node = new Node(arr[mid], ln, rn);
+			
+			return node;
 		}
 		
 		

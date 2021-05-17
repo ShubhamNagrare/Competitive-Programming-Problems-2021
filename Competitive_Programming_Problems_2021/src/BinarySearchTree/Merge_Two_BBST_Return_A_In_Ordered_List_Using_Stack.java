@@ -6,6 +6,11 @@ import java.util.Stack;
 
 public class Merge_Two_BBST_Return_A_In_Ordered_List_Using_Stack {
 	
+	List<Integer> ans = new ArrayList<>();
+	
+	Stack<Integer> s1 = new Stack<>();
+	Stack<Integer> s2 = new Stack<>();
+	
 	public void solve() {
 		
 		BinarySearchTree tree1 = new BinarySearchTree();
@@ -40,33 +45,50 @@ public class Merge_Two_BBST_Return_A_In_Ordered_List_Using_Stack {
 		List<Integer> l1 = tree1.inOrderList();
 		List<Integer> l2 = tree2.inOrderList();
 		
-		mergeAndPrint(l1, l2);			
+		mergeAndPrint(tree1, tree2);			
 	}
 	
+	
+	public void inOrderMerge(Node current) {
+		
+		if(current != null) {
+			inOrderMerge(current.left);
+			int min = getMinimum(current.left.right);
+			inOrderMerge(current.right);
+		}		
+	}
+	
+	
+	
+	
 	private void mergeAndPrint(BinarySearchTree t1 ,  BinarySearchTree t2) {
-		
-		List<Integer> ans = new ArrayList<>();
-		
-		Stack<Integer> s1 = new Stack<>();
-		Stack<Integer> s2 = new Stack<>();
-		
+				
 		Node curr1 = t1.getRoot();
 		Node curr2 = t2.getRoot();
-		while() {
-			
-			
-			int min1 = getMinimum(curr1);
-			int min2 = getMinimum(curr2);
-			
-			s1.add(min1);
-			s2.add(min2);
-			
-			
-			
-		}
 		
-
-				
+		int min1 = getMinimum(curr1);
+		int min2 = getMinimum(curr2);
+		
+//		while() {
+//								
+//			s1.add(min1);
+//			s2.add(min2);
+//			
+//			int minAll = 0;
+//			if(s1.peek() < s2.peek()) {
+//				minAll = s1.pop();
+//			}else {
+//				minAll = s2.pop();
+//			}
+//			
+//			ans.add(minAll);
+//			
+//			
+//			int min1 = getMinimum(curr1);
+//			int min2 = getMinimum(curr2);
+//			
+//					
+//		}				
 	}
 	
 	public int getMinimum(Node current) {
