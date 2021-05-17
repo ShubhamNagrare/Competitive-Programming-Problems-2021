@@ -1,23 +1,28 @@
 package BinarySearchTree;
 
+
 public class Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal {
 	
 	
-	// NOT COMPLETED TODO
+	// https://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/#:~:text=In%20Binary%20Tree%2C%20Inorder%20successor,key%20of%20the%20input%20node.
 	
 	public void implement() {
 		
 		BinaryTree tree = new BinaryTree();
-		tree.add(9);
-		tree.add(16);
-		tree.add(5);
-		tree.add(3);
-		tree.add(7);
-		tree.add(2);
-		tree.add(19);
+		tree.add(20);
+		tree.add(8);
+		tree.add(22);
+		tree.add(4);
 		tree.add(12);
+		tree.add(10);
+		tree.add(14);
 		
-		tree.inOrderPreceddorSuccessor(16);
+		System.out.println("InOrder print --> ");
+		tree.inOrder();
+		
+		System.out.println();
+		System.out.println("Find and print --> ");
+		tree.inOrderPreceddorSuccessor(22);
 		
 	}
 	
@@ -32,6 +37,7 @@ public class Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal {
 	
 	class BinaryTree{
 		Node root;
+		int prev;
 		
 		private Node addRecursive(Node current, int value){
 			
@@ -53,35 +59,37 @@ public class Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal {
 		
 		
 		public void inOrderPreceddorSuccessor(int value) {
-			
-			travsereAndPrint(root, value, null);
+			prev = -1;
+			travsereAndPrint(root, value);
 		}
 		
-		private Node travsereAndPrint(Node current, int value, Node prev) {
-			
-			if(current != null) {
+		private void travsereAndPrint(Node current, int value) {			
+			if(current != null) {				
+				travsereAndPrint(current.left, value);
 				
-				// Successor
-				if(current.value == value) {
-					if(root.right != null) {
-						return findMinimun(root.right);
-					}				
+				if(value == current.value) {
+					System.out.println("Preceddor : " +  prev);
+					int succ = current.right != null ? current.right.value : -1;
+					System.out.println("Successor : " + succ);
 				}
-				
-			
-										
-			}	
-			return null;
-		}
-		
-		private Node findMinimun(Node root) {
-			
-			while(root.left != null) {
-				root = root.left;
+				prev = current.value;			
+				travsereAndPrint(current.right, value);									
 			}
-			return root;
 		}
 		
+
+		
+		public void inOrder() {
+			traverseInOrder(root);
+		}
+		
+		private void traverseInOrder(Node current) {
+			if(current != null) {
+				traverseInOrder(current.left);
+				System.out.print(" " + current.value);
+				traverseInOrder(current.right);
+			}
+		}
 		
 		
 		
