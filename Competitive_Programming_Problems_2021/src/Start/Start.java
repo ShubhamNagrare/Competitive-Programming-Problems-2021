@@ -79,6 +79,7 @@ import Graph.Single_Source_Shortest_Path;
 import Graph.Snakes_And_Ladder_Using_BFS;
 import LinkedList.Implement_A_Linked_List;
 import LinkedList.Reverse_A_Linked_List;
+import Stack.Find_Nearest_Greater_Element_To_Right;
 import String.Find_Most_Occured_Character_In_A_String;
 
 public class Start {
@@ -383,8 +384,12 @@ public class Start {
 	//	Find_And_Print_Target_Sum_In_A_BST_Using_Find_Method m = new Find_And_Print_Target_Sum_In_A_BST_Using_Find_Method();
 	//	m.solve();
 		
-		Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal v = new Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal();
-		v.implement();
+	//	Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal v = new Find_Predecessor_And_Successor_In_A_BST_Using_InOrder_Traversal();
+	//	v.implement();
+		
+		Find_Nearest_Greater_Element_To_Right v = new Find_Nearest_Greater_Element_To_Right();
+		v.solve();
+		
 		
 		
 		
