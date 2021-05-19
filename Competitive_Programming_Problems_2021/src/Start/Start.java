@@ -1,5 +1,6 @@
 package Start;
 
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -77,13 +78,20 @@ import Graph.Implement_Graph_Using_Adjacency_List;
 import Graph.PuruTest;
 import Graph.Single_Source_Shortest_Path;
 import Graph.Snakes_And_Ladder_Using_BFS;
+import Heap.Implement_A_Min_Heap;
 import LinkedList.Implement_A_Linked_List;
 import LinkedList.Reverse_A_Linked_List;
 import Misclleneous.Calculate_Cost;
+import Misclleneous.Count_No_Of_Words_In_A_File;
 import Misclleneous.Mighty_Battle_HackerEarth;
 import Stack.Find_Nearest_Greater_Element_To_Left;
 import Stack.Find_Nearest_Greater_Element_To_Right;
+import String.Check_If_Strings_Are_Rotation_Of_Each_Other;
 import String.Find_Most_Occured_Character_In_A_String;
+import String.Most_Occured_Character_In_A_String;
+import String.Print_Duplicate_Characters_From_A_Given_String;
+import String.Remove_All_Duplicates_From_A_String;
+import String.*;
 
 public class Start {
 
@@ -399,8 +407,39 @@ public class Start {
 	//	Calculate_Cost c = new Calculate_Cost();
 	//	c.solve();
 		
-		Mighty_Battle_HackerEarth m = new Mighty_Battle_HackerEarth();
-		m.solve();
+	//	Mighty_Battle_HackerEarth m = new Mighty_Battle_HackerEarth();
+	//	m.solve();
+		
+	//	Implement_A_Linked_List l =new Implement_A_Linked_List();
+	//	l.solve();
+		
+	//	Count_No_Of_Words_In_A_File m = new Count_No_Of_Words_In_A_File();
+	//	m.solve();
+		
+	//	Most_Occured_Character_In_A_String m = new Most_Occured_Character_In_A_String();
+	//	m.solve();
+		
+	//	Remove_All_Duplicates_From_A_String m = new Remove_All_Duplicates_From_A_String();
+	//	m.solve();
+		
+	//	Print_Duplicate_Characters_From_A_Given_String m = new Print_Duplicate_Characters_From_A_Given_String();
+	//	m.solve();
+		
+	//	Print_Duplicate_Characters_From_A_Given_String g = new Print_Duplicate_Characters_From_A_Given_String();
+	//	g.solve();
+		
+	//	Check_If_Strings_Are_Rotation_Of_Each_Other l = new Check_If_Strings_Are_Rotation_Of_Each_Other();
+	//	l.solve();
+		
+	//	Reverse_Words_In_A_Given_String n = new Reverse_Words_In_A_Given_String();
+	//	n.solve();
+		
+	//	Implement_A_Min_Heap m = new Implement_A_Min_Heap();
+	//	m.implement();
+		
+		Convert_Integer_To_Roman_Values o = new Convert_Integer_To_Roman_Values();
+		o.solve();
+		
 		
 		
 		
