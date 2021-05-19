@@ -79,6 +79,8 @@ import Graph.Single_Source_Shortest_Path;
 import Graph.Snakes_And_Ladder_Using_BFS;
 import LinkedList.Implement_A_Linked_List;
 import LinkedList.Reverse_A_Linked_List;
+import Misclleneous.Calculate_Cost;
+import Misclleneous.Mighty_Battle_HackerEarth;
 import Stack.Find_Nearest_Greater_Element_To_Left;
 import Stack.Find_Nearest_Greater_Element_To_Right;
 import String.Find_Most_Occured_Character_In_A_String;
@@ -391,8 +393,14 @@ public class Start {
 	//	Find_Nearest_Greater_Element_To_Right v = new Find_Nearest_Greater_Element_To_Right();
 	//	v.solve();
 		
-		Find_Nearest_Greater_Element_To_Left l = new Find_Nearest_Greater_Element_To_Left();
-		l.solve();
+	//	Find_Nearest_Greater_Element_To_Left l = new Find_Nearest_Greater_Element_To_Left();
+	//	l.solve();
+		
+	//	Calculate_Cost c = new Calculate_Cost();
+	//	c.solve();
+		
+		Mighty_Battle_HackerEarth m = new Mighty_Battle_HackerEarth();
+		m.solve();
 		
 		
 		
