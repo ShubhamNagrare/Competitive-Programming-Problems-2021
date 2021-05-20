@@ -7,6 +7,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import Array.Find_Greater_No_After_Reverse;
+import Array.Find_Majority_ELement_In_A_Array;
+import Array.Find_Min_Distance_Between_Two_Elements;
+import Array.Find_Union_And_intersection_Of_Two_Array;
+import Array.Print_Leaders_In_A_Array;
 import BinarySearchTree.Check_If_A_Tree_Is_A_Binary_Search_Tree_Or_Not;
 import BinarySearchTree.Convert_A_Binary_Tree_To_Binary_Search_Tree;
 import BinarySearchTree.Convert_BST_To_Sum_Of_All_Smaller_Keys;
@@ -87,6 +91,9 @@ import Misclleneous.Implement_DFS_Using_Graph;
 import Misclleneous.Implement_Flood_Fill_Using_Graph;
 import Misclleneous.Mighty_Battle_HackerEarth;
 import Misclleneous.Snakes_And_Ladder_Graph_Practice;
+import SortingAlgorithms.BubbleSort;
+import SortingAlgorithms.Insertion_Sort;
+import SortingAlgorithms.Selection_Sort;
 import Stack.Find_Nearest_Greater_Element_To_Left;
 import Stack.Find_Nearest_Greater_Element_To_Right;
 import Stack.Implement_A_Stack;
@@ -453,8 +460,29 @@ public class Start {
 	//	Implement_DFS_Using_Graph t = new Implement_DFS_Using_Graph();
 	//	t.dfsCall();
 		
-		Implement_Flood_Fill_Using_Graph g = new Implement_Flood_Fill_Using_Graph();
-		g.floodFill();
+	//	Implement_Flood_Fill_Using_Graph g = new Implement_Flood_Fill_Using_Graph();
+	//	g.floodFill();
+		
+	//	Find_Union_And_intersection_Of_Two_Array m = new Find_Union_And_intersection_Of_Two_Array();
+	//	m.solve();
+		
+	//	Find_Min_Distance_Between_Two_Elements s = new Find_Min_Distance_Between_Two_Elements();
+	//	s.solve();
+		
+	//	Print_Leaders_In_A_Array m = new Print_Leaders_In_A_Array();
+	//	m.solve();
+		
+	//	Find_Majority_ELement_In_A_Array m = new Find_Majority_ELement_In_A_Array();
+	//	m.solve();
+		
+	//	Selection_Sort m = new Selection_Sort();
+	//	m.sort();
+		
+	//	BubbleSort b = new BubbleSort();
+	//	b.sort();
+		
+		Insertion_Sort m = new Insertion_Sort();
+		m.sort();
 		
 		
 		
