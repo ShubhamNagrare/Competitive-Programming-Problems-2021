@@ -3,37 +3,70 @@ package Queue;
 public class Implement_A_Queue {
 	
 	
-	
-	
 	class Queue{
-		int size,front,rear;
-		int arr[];
+		private int[] arr;
+		private int front,rear;
+		private int capacity,count;
 		
-		public Queue(int size) {
-			this.size = size;
-			arr = new int[this.size];
-			this.front = -1;
-			this.rear = -1;
+		public Queue(int capacity) {
+			this.capacity = capacity;
+			arr = new int[this.capacity];
+			front=0;
+			rear = -1;
+			count = 0;
 		}
-	
-	
-	
-	public boolean isFull() {
-		if(front == 0 && rear == size -1) {
-			return true;
-		}
-		return false;
-	}
-	
-	public void enqueue(int value) {
 		
-		if(isFull()) {
+		public int size() {
+			return count;
+		}
+		
+		public boolean isFull() {
+			return  (size() == capacity);
+		}
+		
+		public boolean isEmpty() {
+			return (size() == 0);
+		}
+		
+		
+		public void enqueue(int value) {
 			
+			if(isFull()) {
+				System.out.println("Queue is full");
+				return;
+			}
+			
+			System.out.println("Inserting Item : " + value);
+			rear = (rear + 1) % capacity;
+			arr[rear] = value;
+			count++;			
 		}
 		
+		
+		public void dequeue() {
+			
+			if(isEmpty()) {
+				System.out.println("Queue is Empty");
+				return;
+			}
+			
+			System.out.println("Removing Front : " + arr[front]);
+			front = (front-1) % capacity;
+			count--;
+		}
+		
+		
+		public int peek() {
+			if(isEmpty()) {
+				System.out.println("Queue is Empty");
+				System.exit(1);
+			}
+			return arr[front];
+		}
+		
+		
+		
+		
 	}
-	
-	
-}
 
 }
