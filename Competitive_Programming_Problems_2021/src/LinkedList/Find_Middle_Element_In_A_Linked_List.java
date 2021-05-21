@@ -10,6 +10,7 @@ public class Find_Middle_Element_In_A_Linked_List {
 		li.insert(3);
 		li.insert(4);
 		li.insert(5);
+		li.insert(6);
 		
 		System.out.println(findMid(li));
 	
@@ -19,18 +20,13 @@ public class Find_Middle_Element_In_A_Linked_List {
 		
 		Node root = li.getRoot();
 		
-		int a = 0,  b = 0;
-		Node curr1 = root;
-		Node curr2 = root;
-		while(curr2 != null) {
-			
-			a = curr1.value;
-			curr1 = curr1.next;
-			
-			b = curr2.value;
-			curr2 = curr2.next.next;
+		Node fast = root;
+		Node slow = root;
+		while(fast != null && fast.next != null) {
+			fast = fast.next.next;
+			slow = slow.next;
 		}
-		return a;
+		return slow.value;
 	}
 	
 	
@@ -54,19 +50,15 @@ public class Find_Middle_Element_In_A_Linked_List {
 		public void insert(int value) {
 			if(root == null) {
 				root = new Node(value);
-				size++;
 			}
 			else {
 				
 				Node curr = root;
-				while(curr != null) {
+				while(curr.next != null) {
 					curr = curr.next;
 				}
 				
-				if(curr == null) {
-					curr = new Node(value);
-					size++;
-				}
+					curr.next = new Node(value);
 				
 			}
 		}
