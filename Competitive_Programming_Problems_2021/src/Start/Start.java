@@ -35,6 +35,8 @@ import BinarySearchTree.Traverse_Binary_Tree_Using_Level_Order_Traversal;
 import BinarySearchTree.Traverse_Binary_Tree_Using_Post_Order_Traversal;
 import BinarySearchTree.Traverse_Binary_Tree_Using_Pre_Order_Traversal;
 import BinaryTree.Implement_A_Binary_Search_Tree;
+import Data_Structure_And_Algorithms_Level_Up_Course_Udemy.FizzBuzz;
+import Data_Structure_And_Algorithms_Level_Up_Course_Udemy.Pairs;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Recursion;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Tabulation;
@@ -485,8 +487,14 @@ public class Start {
 	//	Insertion_Sort m = new Insertion_Sort();
 	//	m.sort();
 		
-		Find_Middle_Element_In_A_Linked_List l = new Find_Middle_Element_In_A_Linked_List();
-		l.solve();
+	//	Find_Middle_Element_In_A_Linked_List l = new Find_Middle_Element_In_A_Linked_List();
+	//	l.solve();
+		
+	//	FizzBuzz f = new FizzBuzz();
+	//	f.solve();
+		
+		Pairs p = new Pairs();
+		p.solve();
 		
 		
 		

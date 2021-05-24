@@ -1,5 +1,7 @@
 package LinkedList;
 
+import java.util.Vector;
+
 public class Find_Middle_Element_In_A_Linked_List {
 	
 	public void solve() {
@@ -13,6 +15,23 @@ public class Find_Middle_Element_In_A_Linked_List {
 		li.insert(6);
 		
 		System.out.println(findMid(li));
+		
+		Vector<Integer> v = new Vector<>();
+		System.out.println(v.add(1));
+		System.out.println(v.add(1));
+		System.out.println(v.add(1));
+		System.out.println(v.add(1));
+		System.out.println(v.add(1));
+		System.out.println(v.add(1));
+		System.out.println(v.add(1));
+		System.out.println(v.add(1));
+		System.out.println(v.add(1));
+		System.out.println(v.add(1));
+		System.out.println(v.add(1));
+		System.out.println(v.size());
+		System.out.println(v.capacity());
+		
+		
 	
 	}
 	
