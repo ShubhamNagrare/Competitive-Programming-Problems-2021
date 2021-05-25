@@ -9,6 +9,7 @@ import java.util.Queue;
 import Array.Find_Greater_No_After_Reverse;
 import Array.Find_Majority_ELement_In_A_Array;
 import Array.Find_Min_Distance_Between_Two_Elements;
+import Array.Find_Two_Repeating_Elements_In_A_Given_Array;
 import Array.Find_Union_And_intersection_Of_Two_Array;
 import Array.Print_Leaders_In_A_Array;
 import BinarySearchTree.Check_If_A_Tree_Is_A_Binary_Search_Tree_Or_Not;
@@ -493,8 +494,11 @@ public class Start {
 	//	FizzBuzz f = new FizzBuzz();
 	//	f.solve();
 		
-		Pairs p = new Pairs();
-		p.solve();
+	//	Pairs p = new Pairs();
+	//	p.solve();
+		
+		Find_Two_Repeating_Elements_In_A_Given_Array a = new Find_Two_Repeating_Elements_In_A_Given_Array();
+		a.solve();
 		
 		
 		
