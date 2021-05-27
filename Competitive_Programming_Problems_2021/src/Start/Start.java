@@ -95,6 +95,9 @@ import Misclleneous.Implement_DFS_Using_Graph;
 import Misclleneous.Implement_Flood_Fill_Using_Graph;
 import Misclleneous.Mighty_Battle_HackerEarth;
 import Misclleneous.Snakes_And_Ladder_Graph_Practice;
+import SlidingWindow.Find_Index_Range_Whose_Element_Sum_Equals_To_K;
+import SlidingWindow.Find_Longest_Unique_SubString;
+import SlidingWindow.Find_Smallest_Window_That_Contains_Required_Sum;
 import SortingAlgorithms.BubbleSort;
 import SortingAlgorithms.Insertion_Sort;
 import SortingAlgorithms.Selection_Sort;
@@ -497,8 +500,20 @@ public class Start {
 	//	Pairs p = new Pairs();
 	//	p.solve();
 		
-		Find_Two_Repeating_Elements_In_A_Given_Array a = new Find_Two_Repeating_Elements_In_A_Given_Array();
-		a.solve();
+	//	Find_Two_Repeating_Elements_In_A_Given_Array a = new Find_Two_Repeating_Elements_In_A_Given_Array();
+	//	a.solve();
+		
+	//	Find_Index_Range_Whose_Element_Sum_Equals_To_K k = new Find_Index_Range_Whose_Element_Sum_Equals_To_K();
+	//	k.solve();
+		
+	//	Find_Smallest_Window_That_Contains_Required_Sum l = new Find_Smallest_Window_That_Contains_Required_Sum();
+	//	l.solve();
+		
+	//	Find_Longest_Unique_SubString l = new Find_Longest_Unique_SubString();
+	//	l.solve();
+		
+		Find_Longest_Unique_SubString g = new Find_Longest_Unique_SubString();
+		g.solve();
 		
 		
 		
