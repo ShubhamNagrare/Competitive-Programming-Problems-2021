@@ -76,6 +76,7 @@ import DynamicProgramming.Print_Shortest_Common_SuperSequence;
 import DynamicProgramming.Find_Length_Of_Longest_Common_SubString;
 import DynamicProgramming.Max_profit_In_Unbounded_Knapsack_Problem_Using_Memoization;
 import DynamicProgramming.Subset_Sum_Problem_Using_Tabulation;
+import FamousProblems.SparseArray;
 import Graph.Bipartite_Graph_Check;
 import Graph.Connected_Components_Using_DFS;
 import Graph.Cycle_Detection_Undirected_Graph;
@@ -102,6 +103,7 @@ import SortingAlgorithms.BubbleSort;
 import SortingAlgorithms.Insertion_Sort;
 import SortingAlgorithms.Selection_Sort;
 import Stack.Check_If_Brackets_Are_Balanced_Or_Not;
+import Stack.Find_Max_Element_In_A_Stack;
 import Stack.Find_Nearest_Greater_Element_To_Left;
 import Stack.Find_Nearest_Greater_Element_To_Right;
 import Stack.Implement_A_Stack;
@@ -516,8 +518,14 @@ public class Start {
 	//	Find_Longest_Unique_SubString g = new Find_Longest_Unique_SubString();
 	//	g.solve();
 		
-		Check_If_Brackets_Are_Balanced_Or_Not c = new Check_If_Brackets_Are_Balanced_Or_Not();
-		c.solve();
+	//	Check_If_Brackets_Are_Balanced_Or_Not c = new Check_If_Brackets_Are_Balanced_Or_Not();
+	//	c.solve();
+		
+	//	SparseArray s = new SparseArray();
+	//	s.solve();
+		
+		Find_Max_Element_In_A_Stack s = new Find_Max_Element_In_A_Stack();
+		s.solve();
 		
 		
 		
