@@ -11,6 +11,13 @@ public class Find_Max_Element_In_A_Stack {
 	
 	public void solve() {
 		
+		
+	
+        
+        
+        System.out.println(5%10);
+		
+		
 		List<String> list = new ArrayList<>();
 		list.add("1 97");
 		list.add("2");
