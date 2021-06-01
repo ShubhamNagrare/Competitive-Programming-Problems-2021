@@ -35,6 +35,8 @@ import BinarySearchTree.Traverse_Binary_Tree_Using_In_Order_Traversal;
 import BinarySearchTree.Traverse_Binary_Tree_Using_Level_Order_Traversal;
 import BinarySearchTree.Traverse_Binary_Tree_Using_Post_Order_Traversal;
 import BinarySearchTree.Traverse_Binary_Tree_Using_Pre_Order_Traversal;
+import BinaryTree.Construct_A_Binary_Tree_From_An_Array;
+import BinaryTree.Display_A_Binary_Tree;
 import BinaryTree.Implement_A_Binary_Search_Tree;
 import Data_Structure_And_Algorithms_Level_Up_Course_Udemy.FizzBuzz;
 import Data_Structure_And_Algorithms_Level_Up_Course_Udemy.Pairs;
@@ -524,8 +526,14 @@ public class Start {
 	//	SparseArray s = new SparseArray();
 	//	s.solve();
 		
-		Find_Max_Element_In_A_Stack s = new Find_Max_Element_In_A_Stack();
-		s.solve();
+	//	Find_Max_Element_In_A_Stack s = new Find_Max_Element_In_A_Stack();
+	//	s.solve();
+		
+	//	Construct_A_Binary_Tree_From_An_Array m = new Construct_A_Binary_Tree_From_An_Array();
+	//	m.solve();
+		
+		Display_A_Binary_Tree m = new Display_A_Binary_Tree();
+		m.solve();
 		
 		
 		
