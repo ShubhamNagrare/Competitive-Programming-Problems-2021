@@ -1,18 +1,21 @@
 package BinaryTree;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
-public class Find_Height_Of_A_Binary_Tree {
 
+public class Level_Order_Traversal_In_A_Binary_Tree {
+	
+	
 	public void solve() {
 		
 		int[] arr = {50, 25, 12, -1,  -1,  37, 30, -1, -1, -1, 75, 62, -1, 70, -1, -1, 87, -1, -1 };	
 		BinaryTree bt = new BinaryTree();
 		bt.create(arr);
-		bt.findHeight();
-		
+		bt.traverse();
 	}
-	
+		
 	
 	
 	
@@ -20,25 +23,52 @@ public class Find_Height_Of_A_Binary_Tree {
 		int data;
 		Node left,right;
 		public Node(int data) {
-			this.data=data;
+			this.data =data;
 			left=right=null;
 		}
 	}
-
+	
 	class Pair{
 		int val;
 		Node node;
 		public Pair(Node node, int val) {
-			this.val=val;
-			this.node=node;
+			this.val = val;
+			this.node = node;
 		}
 	}
 	
 	
 	class BinaryTree{
+		
 		Node root;
 		
-		public void create(int[] data) {
+		
+		public void traverse() {
+			traverse(root);
+		}
+		
+		private void traverse(Node curr) {
+			
+			Queue<Node> queue = new LinkedList<>();
+			queue.add(curr);
+			
+			while(queue.size() > 0) {
+				
+				Node node = queue.poll();
+				System.out.println(node.data);
+				
+				if(node.left != null) {
+					queue.add(node.left);
+				}
+				if(node.right != null) {
+					queue.add(node.right);
+				}
+			}
+						
+		}
+			
+		
+public void create(int[] data) {
 			
 			root = new Node(data[0]);
 			Pair cp = new Pair(root, 1);
@@ -82,29 +112,7 @@ public class Find_Height_Of_A_Binary_Tree {
 			
 		}
 		
-		public void findHeight() {
-			System.out.println(height(root));
-		}
-		
-		private int height(Node curr) {
-			
-			if(curr == null) {
-				return 0;
-			}
-			else {
-			int lh = height(curr.left);
-			int rh = height(curr.right);
-			
-			return Integer.max(lh, rh) + 1;
-			}
-		}
 		
 		
 	}
-	
-	
-	
 }
-
-
-
