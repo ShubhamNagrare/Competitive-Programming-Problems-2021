@@ -41,6 +41,15 @@ import BinaryTree.Find_Height_Of_A_Binary_Tree;
 import BinaryTree.Implement_A_Binary_Search_Tree;
 import BinaryTree.Iterative_InOrder_PreOrder_PostOrder_Traversal;
 import BinaryTree.Level_Order_Traversal_In_A_Binary_Tree;
+import BinaryTree.Node_To_Root_Path_In_A_Binary_Tree;
+import BinaryTree.Print_K_Levels_Down;
+import BinaryTree.Print_Left_View_Of_Binary_Tree_Using_Level_Order;
+import BinaryTree.Print_Left_View_Of_Binary_Tree_Using_Recursion;
+import BinaryTree.Print_Right_View_Of_Binary_Tree_Using_Level_Order;
+import BinaryTree.Print_Right_View_Of_Binary_Tree_Using_Recursion;
+import BinaryTree.Print_Single_Child_Node;
+import BinaryTree.Print_Top_View_Of_Binary_Tree_Using_Recursion;
+import BinaryTree.Remove_Leaves;
 import Data_Structure_And_Algorithms_Level_Up_Course_Udemy.FizzBuzz;
 import Data_Structure_And_Algorithms_Level_Up_Course_Udemy.Pairs;
 import DynamicProgramming.Coin_ChangeProblem_Max_No_Of_Ways_Using_Memoization;
@@ -544,8 +553,35 @@ public class Start {
 	//	Level_Order_Traversal_In_A_Binary_Tree m = new Level_Order_Traversal_In_A_Binary_Tree();
 	//	m.solve();
 		
-		Iterative_InOrder_PreOrder_PostOrder_Traversal l = new Iterative_InOrder_PreOrder_PostOrder_Traversal();
-		l.solve();
+	//	Iterative_InOrder_PreOrder_PostOrder_Traversal l = new Iterative_InOrder_PreOrder_PostOrder_Traversal();
+	//	l.solve();
+		
+	//	Node_To_Root_Path_In_A_Binary_Tree  n = new Node_To_Root_Path_In_A_Binary_Tree();
+	//	n.solve();
+		
+	//	Print_K_Levels_Down l = new Print_K_Levels_Down();
+	//	l.solve();
+		
+	//	Print_Single_Child_Node m = new Print_Single_Child_Node();
+	//	m.solve();
+		
+	//	Remove_Leaves  p = new Remove_Leaves();
+	//	p.solve();
+		
+	//	Print_Left_View_Of_Binary_Tree_Using_Level_Order v = new Print_Left_View_Of_Binary_Tree_Using_Level_Order();
+	//	v.solve();
+		
+	//	Print_Left_View_Of_Binary_Tree_Using_Recursion m = new Print_Left_View_Of_Binary_Tree_Using_Recursion();
+	//	m.solve();
+		
+	//	Print_Right_View_Of_Binary_Tree_Using_Level_Order b = new Print_Right_View_Of_Binary_Tree_Using_Level_Order();
+	//	b.solve();
+		
+	//	Print_Right_View_Of_Binary_Tree_Using_Recursion m = new Print_Right_View_Of_Binary_Tree_Using_Recursion();
+	//	m.solve();
+		
+		Print_Top_View_Of_Binary_Tree_Using_Recursion m = new Print_Top_View_Of_Binary_Tree_Using_Recursion();
+		m.solve();
 		
 		
 		

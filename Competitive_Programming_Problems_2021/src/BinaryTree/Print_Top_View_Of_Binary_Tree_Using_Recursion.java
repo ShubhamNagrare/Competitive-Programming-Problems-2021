@@ -1,25 +1,26 @@
 package BinaryTree;
-
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
-import BinaryTree.Iterative_InOrder_PreOrder_PostOrder_Traversal.BinaryTree;
 
-public class Node_To_Root_Path_In_A_Binary_Tree {
-	
+public class Print_Top_View_Of_Binary_Tree_Using_Recursion {
+
+
 	public void solve() {
 		int[] arr = {50, 25, 12, -1,  -1,  37, 30, -1, -1, -1, 75, 62, -1, 70, -1, -1, 87, -1, -1 };	
 		BinaryTree bt = new BinaryTree();
 		bt.insert(arr);
-		bt.nodeToRoot(30);
+		bt.topView();
+		
 	}
-	
 	
 	class Node{
 		int data;
 		Node left,right;
 		public Node(int data) {
 			this.data = data;
-			left=right=null;
+			left = right = null;
 		}
 	}
 	
@@ -27,58 +28,65 @@ public class Node_To_Root_Path_In_A_Binary_Tree {
 		int val;
 		Node node;
 		public Pair(Node node, int val) {
-			this.node = node;
 			this.val = val;
+			this.node = node;
 		}
 	}
 	
 	class BinaryTree{
 		Node root;
+		int height;
+		int[] arr;
+		Map<Integer, Pair> map;
 		
-		
-		public void nodeToRoot(int val) {
-			nodeToRoot(root, val);
-			System.out.println(nodeToRoot);
+		public void topView() {
+			map = new HashMap<>();
+			Pair p = new Pair(root, 0);
+			map.put(0, p);
+			topView(root, 0, 0);
+			
 		}
 		
-		String nodeToRoot = "";
-		private boolean nodeToRoot(Node curr, int val) {
+		private void topView(Node curr, int dist, int height) {
 			
-			if(curr == null) 
-				return false;
-			
-			if(curr.data == val) {
-				nodeToRoot += curr.data + " ";
-				return true;
+			if(curr == null) {
+				return;
 			}
 			
-			boolean lc = nodeToRoot(curr.left, val);
-			if(lc) {
-				nodeToRoot += curr.data + " ";
-				return true;
+			if((!map.containsKey(dist)) || map.get(dist).val < height ) {
+					map.put(dist, new Pair(curr, height));
 			}
 			
-			boolean rc = nodeToRoot(curr.right, val);
-			if(rc) {
-				nodeToRoot += curr.data + " ";
-				return true;
+						
+			topView(curr.left, dist-1, height+1);
+			topView(curr.right, dist+1, height+1);
+			
+		}
+		
+		private int getHeight() {
+			return getHeight(root);
+		}
+		
+		private int getHeight(Node curr) {
+			if(curr == null) {
+				return 0;
 			}
 			
-			return false;
-			
+			int lh = getHeight(curr.left) + 1;
+			int rh = getHeight(curr.right) + 1;
+			return Integer.max(lh, rh);
 		}
 		
 		
 		public void insert(int[] arr) {
-			
 			root = new Node(arr[0]);
-			Pair fp = new Pair(root, 1);
+			Pair p = new Pair(root, 1);
 			
 			Stack<Pair> stack = new Stack<>();
-			stack.push(fp);
+			stack.push(p);
 			
 			int i=0;
-			while(stack.size()>0) {
+			while(!stack.isEmpty()) {
 				
 				Pair top = stack.peek();
 				
@@ -111,8 +119,8 @@ public class Node_To_Root_Path_In_A_Binary_Tree {
 					stack.pop();
 				}			
 			}
-			
 		}
+		
 	}
-
 }
+
