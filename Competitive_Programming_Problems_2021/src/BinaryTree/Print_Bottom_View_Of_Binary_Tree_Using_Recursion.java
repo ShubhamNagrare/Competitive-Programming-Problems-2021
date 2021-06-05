@@ -1,17 +1,16 @@
 package BinaryTree;
-import java.util.HashMap;
+
 import java.util.Map;
 import java.util.Stack;
+import java.util.TreeMap;
 
-
-public class Print_Top_View_Of_Binary_Tree_Using_Recursion {
-
-
+public class Print_Bottom_View_Of_Binary_Tree_Using_Recursion {
+	
 	public void solve() {
 		int[] arr = {50, 25, 12, -1,  -1,  37, 30, -1, -1, -1, 75, 62, -1, 70, -1, -1, 87, -1, -1 };	
 		BinaryTree bt = new BinaryTree();
 		bt.insert(arr);
-		bt.topView();
+		bt.bottomView();
 		
 	}
 	
@@ -28,59 +27,45 @@ public class Print_Top_View_Of_Binary_Tree_Using_Recursion {
 		int val;
 		Node node;
 		public Pair(Node node, int val) {
-			this.val = val;
-			this.node = node;
+			this.val=val;
+			this.node=node;
 		}
 	}
 	
 	class BinaryTree{
-		Node root;
-		int height;
-		int[] arr;
-		Map<Integer, Pair> map;
 		
-		public void topView() {
-			map = new HashMap<>();
-			Pair p = new Pair(root, 0);
-			map.put(0, p);
-			topView(root, 0, 0);
+		Node root;
+		Map<Integer,Pair> map;
+		
+		public void bottomView() {
+			map = new TreeMap<>();
+			bottomView(root, 0,0);
 			
-			for(Integer i : map.keySet()) {
-				System.out.print(" " + map.get(i).node.data);
+			for(Integer k : map.keySet()) {
+				System.out.print(map.get(k).node.data + " ");
 			}
 			
 		}
 		
-		private void topView(Node curr, int dist, int height) {
+		
+		private void bottomView(Node curr, int dist, int height) {
 			
 			if(curr == null) {
 				return;
 			}
 			
-			if((!map.containsKey(dist)) || map.get(dist).val < height ) {
-					map.put(dist, new Pair(curr, height));
-			}
-								
-			topView(curr.left, dist-1, height+1);
-			topView(curr.right, dist+1, height+1);	
-		}
-		
-		private int getHeight() {
-			return getHeight(root);
-		}
-		
-		private int getHeight(Node curr) {
-			if(curr == null) {
-				return 0;
+			if( (!map.containsKey(dist)) || map.get(dist).val < height ) {
+				map.put(dist, new Pair(curr, height));
 			}
 			
-			int lh = getHeight(curr.left) + 1;
-			int rh = getHeight(curr.right) + 1;
-			return Integer.max(lh, rh);
+			bottomView(curr.left, dist-1, height+1);
+			bottomView(curr.right, dist+1, height+1);
 		}
+		
 		
 		
 		public void insert(int[] arr) {
+			
 			root = new Node(arr[0]);
 			Pair p = new Pair(root, 1);
 			
@@ -106,6 +91,7 @@ public class Print_Top_View_Of_Binary_Tree_Using_Recursion {
 					top.val++;
 				}
 				else if(top.val == 2) {
+
 					i++;
 					if(arr[i] != -1) {
 						top.node.right = new Node(arr[i]);
@@ -119,10 +105,13 @@ public class Print_Top_View_Of_Binary_Tree_Using_Recursion {
 				}
 				else {
 					stack.pop();
-				}			
-			}
+				}
+			}			
 		}
 		
+		
 	}
-}
+	
+	
 
+}
