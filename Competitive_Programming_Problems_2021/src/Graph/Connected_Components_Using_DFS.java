@@ -6,7 +6,7 @@ import Graph.Implement_Depth_First_Search.Graph;
 
 public class Connected_Components_Using_DFS {
 
-	public void countConnectedGraph() {
+	public void solve() {
 		Graph g = new Graph();
 		g.addEdge(0,1);
 		g.addEdge(1,2);

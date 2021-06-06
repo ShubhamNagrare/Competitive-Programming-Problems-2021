@@ -96,6 +96,7 @@ import DynamicProgramming.Find_Length_Of_Longest_Common_SubString;
 import DynamicProgramming.Max_profit_In_Unbounded_Knapsack_Problem_Using_Memoization;
 import DynamicProgramming.Subset_Sum_Problem_Using_Tabulation;
 import FamousProblems.SparseArray;
+import GoogleKickstart.K_Goodness_String;
 import Graph.Bipartite_Graph_Check;
 import Graph.Connected_Components_Using_DFS;
 import Graph.Cycle_Detection_Undirected_Graph;
@@ -111,8 +112,12 @@ import LinkedList.Implement_A_Linked_List;
 import LinkedList.Reverse_A_Linked_List;
 import Misclleneous.Calculate_Cost;
 import Misclleneous.Count_No_Of_Words_In_A_File;
+import Misclleneous.Find_Connected_Component_In_A_Graph_Using_DFS;
+import Misclleneous.Graph_Single_Source_Shortest_Path;
 import Misclleneous.Implement_DFS_Using_Graph;
 import Misclleneous.Implement_Flood_Fill_Using_Graph;
+import Misclleneous.Implemetn_Graph_And_Traverse_Using_BFS;
+import Misclleneous.Implemetn_Graph_And_Traverse_Using_DFS;
 import Misclleneous.Mighty_Battle_HackerEarth;
 import Misclleneous.Snakes_And_Ladder_Graph_Practice;
 import SlidingWindow.Find_Index_Range_Whose_Element_Sum_Equals_To_K;
@@ -600,7 +605,25 @@ public class Start {
 	//	Create_Mirror_Of_A_Binary_Tree_Using_Recursion n = new Create_Mirror_Of_A_Binary_Tree_Using_Recursion();
 	//	n.solve();
 		
-		ZigZag_Traversal_Of_A_Binary_Tree m = new ZigZag_Traversal_Of_A_Binary_Tree();
+	//	ZigZag_Traversal_Of_A_Binary_Tree m = new ZigZag_Traversal_Of_A_Binary_Tree();
+	//	m.solve();
+		
+	//	K_Goodness_String m = new K_Goodness_String();
+	//	m.solve();
+		
+	//	Implemetn_Graph_And_Traverse_Using_BFS m = new Implemetn_Graph_And_Traverse_Using_BFS();
+	//	m.solve();
+		
+	//	Graph_Single_Source_Shortest_Path m = new Graph_Single_Source_Shortest_Path();
+	//	m.solve();
+		
+	//	Snakes_And_Ladder_Graph_Practice m = new Snakes_And_Ladder_Graph_Practice();
+	//	m.solve();
+		
+	//	Implemetn_Graph_And_Traverse_Using_DFS m = new Implemetn_Graph_And_Traverse_Using_DFS();
+	//	m.solve();
+		
+		Find_Connected_Component_In_A_Graph_Using_DFS m = new Find_Connected_Component_In_A_Graph_Using_DFS();
 		m.solve();
 		
 		

@@ -61,10 +61,10 @@ public class ZigZag_Traversal_Of_A_Binary_Tree {
 				
 				//if(i%2 == 0) {
 				if(node.left != null) {
-					q.add(node.left, i++);
+					q.add(node.left);
 				}
 				if(node.right != null) {
-					q.add(node.right, i++);
+					q.add(node.right);
 				}
 //				}
 //				else {

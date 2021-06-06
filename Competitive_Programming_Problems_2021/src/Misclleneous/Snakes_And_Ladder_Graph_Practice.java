@@ -70,46 +70,38 @@ public class Snakes_And_Ladder_Graph_Practice {
 			}
 			map.get(dest).add(src);			
 		}
-		
-		public boolean addVertex(int key) {		
-			if(!map.containsKey(key)) {
-				map.put(key, new ArrayList<>());
-				return true;
-			}
-			return false;
-		}
+
 		
 		
 		
 		public int dfs(int src, int destination) {
 			
 			Queue<Integer> queue = new LinkedList<>();
-			HashMap<Integer,Integer> dist = new HashMap<>();
+			Map<Integer,Integer> dist = new HashMap<>();
 			
-			for(Integer current  : map.keySet()) {
-				dist.put(current, Integer.MAX_VALUE);
+			for(int currMap : map.keySet()) {
+				dist.put(currMap, Integer.MAX_VALUE);
 			}
 			
 			queue.add(src);
-			int val = dist.get(src);
-			val = 0;
-			dist.put(src, val);
+			dist.put(src, 0);
 			
-			while(queue.size() != 0) {
+			while(!queue.isEmpty()) {
 				
-				int currPoll = queue.poll();
-				
-				for(Integer curr : map.get(currPoll)) {
-					
+				int val = queue.poll();
+				for(int curr : map.get(val)) {					
 					if(dist.get(curr) == Integer.MAX_VALUE) {
 						queue.add(curr);
-						int h = dist.get(curr);
-						h = dist.get(currPoll) + 1;
+						int h = dist.get(val) + 1;
 						dist.put(curr, h);
-					}		
-				}
+					}			
+				}	
 			}
-			return  dist.get(destination);	
+			
+			
+			return dist.get(destination);
+			
+			
 		}
 		
 		

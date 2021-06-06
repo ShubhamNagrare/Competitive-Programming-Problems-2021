@@ -74,8 +74,8 @@ private class Graph<K>{
 				
 				if(dist.get(curr) == Integer.MAX_VALUE) {
 					q.add(curr);
-					int h = dist.get(curr);
-					h = dist.get(c) + 1;
+				//	int h = dist.get(curr);
+					int h = dist.get(c) + 1;
 					dist.put(curr, h);
 				}	
 			}		
