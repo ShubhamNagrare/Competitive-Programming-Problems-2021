@@ -100,6 +100,7 @@ import GoogleKickstart.K_Goodness_String;
 import Graph.Bipartite_Graph_Check;
 import Graph.Connected_Components_Using_DFS;
 import Graph.Cycle_Detection_Undirected_Graph;
+import Graph.Find_All_Path_In_Graph_Using_DFS;
 import Graph.Find_If_A_path_Is_Present_In_A_Graph;
 import Graph.Flood_Fill;
 import Graph.Implement_Depth_First_Search;
@@ -627,8 +628,11 @@ public class Start {
 	//	Find_Connected_Component_In_A_Graph_Using_DFS m = new Find_Connected_Component_In_A_Graph_Using_DFS();
 	//	m.solve();
 		
-		Find_If_A_path_Is_Present_In_A_Graph m = new Find_If_A_path_Is_Present_In_A_Graph();
-		m.solve();
+	//	Find_If_A_path_Is_Present_In_A_Graph m = new Find_If_A_path_Is_Present_In_A_Graph();
+	//	m.solve();
+		
+		Find_All_Path_In_Graph_Using_DFS n = new Find_All_Path_In_Graph_Using_DFS();
+		n.solve();
 		
 		
 		
