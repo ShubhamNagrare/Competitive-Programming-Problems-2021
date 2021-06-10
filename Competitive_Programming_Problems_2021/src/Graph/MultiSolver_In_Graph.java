@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.PriorityQueue;
 
 import Graph.Find_All_Path_In_Graph_Using_DFS.Graph;
 
@@ -17,22 +18,20 @@ public class MultiSolver_In_Graph {
 	public void solve() {
 		
 		Graph g = new Graph();
-		g.addEdge(0,1);
-		g.addEdge(1,2);
-		g.addEdge(2,3);
-		g.addEdge(3,4);
-		g.addEdge(0,3);
-		
-		g.addEdge(4,5);
-		g.addEdge(4,6);
-		
-		g.addEdge(5,6);
+		g.addEdge(0,1, 10);
+		g.addEdge(1,2, 10);
+		g.addEdge(2,3, 10);
+		g.addEdge(3,4, 2);
+		g.addEdge(0,3, 40);
+		g.addEdge(4,5, 3);
+		g.addEdge(4,6, 8);
+		g.addEdge(5,6, 3);
 		
 		g.multiSolver(0,6);	
 	}
 	
 	
-	class Edge{
+	public static class Edge{
 		int val;
 		int nbr;
 		int num;
@@ -41,6 +40,20 @@ public class MultiSolver_In_Graph {
 			this.nbr = nbr;
 			this.num=num;
 		}
+	}
+	
+	public static class Pair implements Comparable<Pair>{
+		int wt;
+		String path;
+		public Pair(int wt, String path) {
+			this.wt = wt;
+			this.path = path;
+		}
+		
+		public int compareTo(Pair p) {
+			return this.wt - p.wt;
+		}
+		
 	}
 	
 	public static class Graph{
@@ -57,14 +70,31 @@ public class MultiSolver_In_Graph {
 			for(int curr : map.keySet()) {	
 				visited.put(curr, false);
 			}
-			multiSolver(start, dest, visited, String.valueOf(start), 0);
+			multiSolver(start, dest, visited, String.valueOf(start), 0, 40, 3);
+			
+			System.out.println("SmallPath : " + smallPath + " @ " + smallPathWt);
+			System.out.println("Longest : " + longestPath + " @ " + longestPathWt);
+			System.out.println("Criteria : " + cPath + " @ " + cPathWt);
+			System.out.println("Criteria : " + fPath + " @ " + fPathWt);
+			System.out.println("kth largest  : " + pq.peek().path + " @ " + pq.peek().wt);
 		}
 		
 		
 		static String smallPath = "";
 		static Integer smallPathWt = Integer.MAX_VALUE;
 		
-		private void multiSolver(int start,  int dest, Map<Integer,Boolean> visited, String stn, int wtn) {
+		static String longestPath = "";
+		static Integer longestPathWt = Integer.MIN_VALUE;
+		
+		static String cPath = "";
+		static Integer cPathWt = Integer.MAX_VALUE;
+		
+		static String fPath = "";
+		static Integer fPathWt = Integer.MIN_VALUE;
+		
+		static PriorityQueue<Pair> pq  = new PriorityQueue<>();
+		
+		private void multiSolver(int start,  int dest, Map<Integer,Boolean> visited, String stn, int wtn, int criteria, int k) {
 			
 			if(start == dest){
 				
@@ -73,14 +103,37 @@ public class MultiSolver_In_Graph {
 					smallPath = stn;
 				}
 				
+				if(wtn > longestPathWt) {
+					longestPathWt = wtn;
+					longestPath = stn;
+				}
+				
+				if(wtn > criteria && wtn  < cPathWt) {					
+					cPathWt = wtn;
+					cPath = stn;					
+				}
+				
+				if(wtn < criteria && wtn  > fPathWt) {					
+					fPathWt = wtn;
+					fPath = stn;					
+				}
+				
+				if(pq.size() < k) {
+					pq.add( new Pair(wtn, stn) );
+				}else {
+					if(wtn > pq.peek().wt) {
+						pq.remove();
+						pq.add(new Pair(wtn, stn));
+					}
+				}
 				
 				return;
 			}
 			
 			visited.put(start, true);
 			for(Edge now: map.get(start)) {
-				if(!visited.get(now)) {
-					multiSolver(now.nbr, dest, visited, stn + " " + now.nbr, wtn + now.num  );
+				if(!visited.get(now.nbr)) {
+					multiSolver(now.nbr, dest, visited, stn + " " + now.nbr, wtn + now.num, criteria , k );
 				}
 			}
 			visited.put(start, false);
@@ -93,7 +146,8 @@ public class MultiSolver_In_Graph {
 			if(!map.containsKey(src)) {
 				map.put(src, new ArrayList<>());
 			}
-			map.get(src).add(new Edge(src,dest,num));
+			map.get(src).add(  new Edge(src, dest, num) );
+			
 			if(!map.containsKey(dest)) {
 				map.put(dest, new ArrayList<>());
 			}
