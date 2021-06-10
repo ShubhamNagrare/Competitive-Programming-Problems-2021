@@ -101,6 +101,7 @@ import Graph.Bipartite_Graph_Check;
 import Graph.Connected_Components_Using_DFS;
 import Graph.Count_No_Of_Islands_Using_Graph;
 import Graph.Cycle_Detection_Undirected_Graph;
+import Graph.Dijkistras_Shortest_Start_To_Destination;
 import Graph.Find_All_Path_In_Graph_Using_DFS;
 import Graph.Find_If_A_path_Is_Present_In_A_Graph;
 import Graph.Find_If_Graph_Is_Connected;
@@ -110,6 +111,7 @@ import Graph.Get_No_Of_Connected_Components;
 import Graph.Implement_Depth_First_Search;
 import Graph.Implement_Graph_Using_Adjacency_List;
 import Graph.MultiSolver_In_Graph;
+import Graph.Prims_Algorithm_To_Find_Minimun_Spanning_Tree;
 import Graph.PuruTest;
 import Graph.Single_Source_Shortest_Path;
 import Graph.Single_Source_Shortest_Path_In_Weight_Dijkstras_Algorithm;
@@ -658,8 +660,14 @@ public class Start {
 	//	Count_No_Of_Islands_Using_Graph v = new Count_No_Of_Islands_Using_Graph();
 	//	v.solve();
 		
-		Single_Source_Shortest_Path_In_Weight_Dijkstras_Algorithm m = new Single_Source_Shortest_Path_In_Weight_Dijkstras_Algorithm();
-		m.solve();
+	//	Single_Source_Shortest_Path_In_Weight_Dijkstras_Algorithm m = new Single_Source_Shortest_Path_In_Weight_Dijkstras_Algorithm();
+	//	m.solve();
+		
+	//	Dijkistras_Shortest_Start_To_Destination m = new Dijkistras_Shortest_Start_To_Destination();
+	//	m.solve();
+		
+		Prims_Algorithm_To_Find_Minimun_Spanning_Tree b = new Prims_Algorithm_To_Find_Minimun_Spanning_Tree();
+		b.solve();
 		
 		
 		

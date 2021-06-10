@@ -89,7 +89,8 @@ public class Single_Source_Shortest_Path_In_Weight_Dijkstras_Algorithm {
 				Pair top = pq.remove();			
 				if(visited.get(top.vertex) == true) {
 					continue;
-				}				
+				}			
+
 				System.out.println("Vertex : " + top.vertex + " has String : " + top.psf + " has weight " + top.wsf);
 				
 				visited.put(top.vertex, true);				
