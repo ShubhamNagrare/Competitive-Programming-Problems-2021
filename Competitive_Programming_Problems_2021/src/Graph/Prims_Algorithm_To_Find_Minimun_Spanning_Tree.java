@@ -1,6 +1,8 @@
 package Graph;
 
 import java.util.ArrayList;
+import java.io.*;
+import java.util.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,8 +28,151 @@ public class Prims_Algorithm_To_Find_Minimun_Spanning_Tree {
 		g.prims(0);
 		
 		System.out.println("Done");
-			
+		
+		
+		List<List<String>> li = new ArrayList<>();
+		
+		List<String> l1 = new ArrayList<>();
+		l1.add("add");
+		l1.add("hack");
+		
+		List<String> l2 = new ArrayList<>();
+		l2.add("add");
+		l2.add("hackerrank");
+		
+		List<String> l3 = new ArrayList<>();
+		l3.add("find");
+		l3.add("hac");
+		
+		List<String> l4 = new ArrayList<>();
+		l4.add("find");
+		l4.add("hak");
+		
+		li.add(l1);
+		li.add(l2);
+		li.add(l3);li.add(l4);
+		
+		
+		System.out.println(contacts(li));
+				
 	}
+	
+
+    
+    public static class Trie{
+    	
+    	
+    	 static class TrieNode{
+    	        boolean isEnd;
+    	        TrieNode children[];
+    	        int count;
+    	        
+    	        public TrieNode(){
+    	            isEnd = false;
+    	            children = new TrieNode[26];
+    	            count = 1;
+    	        }
+    	    }
+    	 
+        TrieNode root;
+        
+        public Trie(){
+            root = new TrieNode();
+        }
+        
+        public int search(String key){
+            int index;
+            TrieNode pCrawl = root;
+           
+            for (int i = 0; i < key.length(); i++)
+            {
+                index = key.charAt(i) - 'a';
+           
+                if (pCrawl.children[index] == null)
+                    return -1;
+           
+                pCrawl = pCrawl.children[index];
+            }
+           
+            return pCrawl.count;
+        }
+        
+        
+        public void insert(String key){
+        	int level;
+            int length = key.length();
+            int index;
+           
+            TrieNode pCrawl = root;
+           
+            for (level = 0; level < length; level++)
+            {
+                index = key.charAt(level) - 'a';
+                if (pCrawl.children[index] == null)
+                    pCrawl.children[index] = new TrieNode();
+           
+                pCrawl = pCrawl.children[index];
+            }
+           
+            // mark last node as leaf
+            pCrawl.isEnd = true;
+            pCrawl.count++;
+        }
+        
+    }
+
+
+    /*
+     * Complete the 'contacts' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts 2D_STRING_ARRAY queries as parameter.
+     */
+
+    public static List<Integer> contacts(List<List<String>> queries) {
+        List<Integer> list = new ArrayList<>();
+        Trie trie = new Trie();
+        
+        if(queries.size() < 1){
+            return list;
+        }
+        
+        for(List<String> curr : queries){
+            
+            String first = curr.get(0);
+            String second = curr.get(1);
+            
+            if(first == "add")
+            {
+                trie.insert(second);
+            }
+            else if(first == "find")
+            {
+                list.add(trie.search(second));
+            }
+        }
+    
+        return list;
+    }
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
 	
