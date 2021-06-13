@@ -666,8 +666,11 @@ public class Start {
 	//	Dijkistras_Shortest_Start_To_Destination m = new Dijkistras_Shortest_Start_To_Destination();
 	//	m.solve();
 		
-		Prims_Algorithm_To_Find_Minimun_Spanning_Tree b = new Prims_Algorithm_To_Find_Minimun_Spanning_Tree();
-		b.solve();
+	//	Prims_Algorithm_To_Find_Minimun_Spanning_Tree b = new Prims_Algorithm_To_Find_Minimun_Spanning_Tree();
+	//	b.solve();
+		
+		Implement_A_Min_Heap m = new Implement_A_Min_Heap();
+		m.solve();
 		
 		
 		

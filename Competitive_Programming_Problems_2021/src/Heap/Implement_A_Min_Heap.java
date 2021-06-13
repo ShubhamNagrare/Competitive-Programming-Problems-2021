@@ -1,41 +1,58 @@
 package Heap;
 
-import java.util.PriorityQueue;
 
 public class Implement_A_Min_Heap {
 	
+	public void solve() {
+		
+		  int arr[] = { 1, 3, 5, 4, 6, 13, 10, 9, 8, 15, 17 };
+		  
+		  int n = arr.length;
+		  buildHeap(arr, n);
+		  
+		  int k = arr[0];
+		  System.out.println(k);
+		  
+	}
 	
-	static PriorityQueue<Integer> queue = new PriorityQueue<>();
 	
-	public void implement(){
+	
+	public void heapify(int[] arr, int n, int i) {
 		
-		queue.add(8);
-		queue.add(5);
-		queue.add(13);
-		queue.add(2);
-		queue.add(23);
-		queue.add(16);	
-		print();
+		int largest = i;
+		int left = (2*i)+1;
+		int right = (2*i)+2;
 		
-		System.out.println("SIZE : " + queue.size());
+		if(left < n && arr[left] > arr[largest]) {
+			largest = left;
+		}
 		
-		System.out.println("HEAD : " + queue.peek());
+		if(right < n && arr[right] > arr[largest]) {
+			largest = right;
+		}
 		
-		System.out.println("REMOVE HEAD : " + queue.poll());
+		if(largest != i) {
+			int temp = arr[i];
+			arr[i] = arr[largest];
+			arr[largest] = temp;
+			
+			heapify(arr, n, largest);
+		}
 		
-		System.out.println("REMOCE SPECIFIC ELEMENTS : " + queue.remove(16) );
 		
-		System.out.println("CHECK IF ELEMENT IS PRESENT : " + queue.contains(23));
 		
 	}
 	
-	private static void print() {
-		System.out.println("Min Heap : ");
+	
+	
+	public void buildHeap(int[] arr, int n) {
 		
-		for(Integer i : queue) {
-			System.out.print(i + " ");
+		int ind = (n/2) - 1;
+		
+		for(int i=ind; i>=0; i--) {
+			heapify(arr, n, i);
 		}
-		System.out.println();
+		
 	}
 
 }
